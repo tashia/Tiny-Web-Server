@@ -1,8 +1,0 @@
-Active Internet connections (only servers)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State      
-udp        0      0 *:35159                 *:*                                
-udp        0      0 *:bootpc                *:*                                
-udp        0      0 *:17500                 *:*                                
-udp        0      0 *:mdns                  *:*                                
-udp6       0      0 [::]:36684              [::]:*                             
-udp6       0      0 [::]:mdns               [::]:*                             
