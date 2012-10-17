@@ -102,6 +102,7 @@ void ClientHandler::getRequestMessagebody(char** msgBuf)
         if (*msgBuf != 0)
             delete [] *msgBuf;
         *msgBuf = new char[_httpRequest->_content_Length];
+        // should check how many bytes you have received 
         if (_sock.Receive(*msgBuf,_httpRequest->_content_Length)==-1)
             perror("receive message body error: ");
         return;
