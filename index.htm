@@ -1,36 +1,83 @@
+<!DOCTYPE HTML>
 <html>
-<body>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-<h1>My Main Page</h1>
+    <title>MainPage</title>
+    <!--link rel="stylesheet" href="CSS/mymain.css" type="text/css" media="screen" charset="utf-8"--> 
+    <link rel="stylesheet" href="http://cloud.typography.com/610186/608840/css/fonts.css" type="text/css" media="screen" charset="utf-8">
+    <script type="text/javascript" charset="utf-8">
+      function sock(){
+        alert("begin connecting ...");
+        // var connection = new WebSocket('ws://echo.websocket.org/');
+        var connection = new WebSocket('ws://localhost:3491');
 
-<p>This is paragraph.</p>
+        /*WebSocket on client side will throw onopen event only
+          when handshake is proceed by both sides and it was
+          successful*/
+        connection.onopen = function(){
+          connection.send('hello world');
+          alert("Message is sent...");
+        };
+        alert("the end ...");
+      } 
+ /*source: www.matlus.com/html5-file-upload-with-progress*/
+function uploadFile(){
 
-<img border="0" src="/images/nigel.jpg" alt="jpeg" width="300" height="200" /><br>
+  var xhr = new XMLHttpRequest();
+alert("post starts");
+  var fd = new FormData(document.getElementById("upForm"));
 
-<img border="0" src="/images/images.gif" alt="gif" width="315" height="450" /><br>
-<A HREF="/files/file.txt">file.txt</A><br> 
-<!--A HREF="/images/images.gif">image.gif</A><br-->
-<A HREF="/files/zipfile.zip">zipfile.zip</A><br>
+  xhr.open("POST", "files/",true);
 
-<!--form name="input" method="post">
-First name: <input type="text" name="FirstName" value="Shilei" /><br />
-Last name: <input type="text" name="LastName" value="Zhu" /><br />
-<input type="submit" value="Submit" />
-</form--> 
-
-<form 
-enctype="multipart/form-data" method="post">
-<p>
-Type some text (if you like):<br>
-<input type="text" name="textline" size="30">
-</p>
-<p>
-Please specify a file, or a set of files:<br>
-<input type="file" name="datafile" size="40">
-</p>
-<div>
-<input type="submit" value="Send">
-</div>
-</form>
-</body>
-</html> 
+  xhr.send(fd);
+  alert("post finishes");
+}
+</script>
+  </head>
+  <body>
+    <div id="mainBlock">
+      <div id="header">
+        <h1>This is the main page</h1>
+      </div>
+      <div id="menubar">
+        <p>this the navigation bar</p>
+      </div>
+      <div id="content">
+        <p>This is the main content</p>
+        <div id="text_area">
+          <!-- text field-->
+          <form action="/message" method="get" accept-charset="utf-8">
+            <p>Text Field:</p> <br>
+            <textarea name="sendMsg" COLS=56 ROWS=10 ></textarea>
+            <center>
+              <input id="submitBtn" type="Submit" value="Submit"><br>
+            </center>
+          </form>
+        </div>
+        <div id="display_area">
+          <!--display area/ message panel-->
+          <p id="insidep">The area will display sending and receiving information</P>
+        </div>
+        <div id="upload_area">
+          <!-- file uploaded area --> 
+          <p>This div for uploading files</p>
+          <!--multipart/form-data means no characters are encoded-->
+          <form id="upForm" action="files/" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+            <input id="choosefile" type="file" name="files[]" value=""/>
+            <input type="button" class="button" value="UPLOAD" name="" onclick="uploadFile()" />
+          </form>
+        </div>
+        <!-- this button for websocket demo-->
+        <div id="webSock">
+          <p>this div for WebSocket test</p>
+          <form action="" method="get" accept-charset="utf-8">
+            IP Address: <input type="text" name="ip" value="127.0.0.1"><br>
+            Port: <input type="text" name="port" value="80">
+          </form>
+          <input type="button" class="button" value="WebSocket Connect" name="" onclick="sock()" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

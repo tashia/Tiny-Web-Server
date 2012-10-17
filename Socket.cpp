@@ -288,7 +288,7 @@ void SocketAssistant::Init(const char* nodename, const char* sevname) {
     memset(&hints, 0, sizeof hints);
     hints.ai_family = AF_UNSPEC;
     hints.ai_socktype = SOCK_STREAM;
-    hints.ai_flags = AI_PASSIVE; // fill in my IP for me
+ //   hints.ai_flags = AI_PASSIVE; // fill in my IP for me
     if ((status = getaddrinfo(nodename, sevname, &hints, &addrList)) != 0) {
         fprintf(stderr, "getaddrinfo error: %s\n", gai_strerror(status));
         exit(1);

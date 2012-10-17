@@ -9,6 +9,9 @@
 
 ClientHandler::ClientHandler(Socket& sock) : _sock(sock) {
     _httpRequest = new Http_Request();
+    if (_httpRequest == 0) {
+        /* handle the lack of memory */
+    }
 }
 
 
@@ -55,15 +58,20 @@ std::string ClientHandler::getRequestHeaders()
 void ClientHandler::ParseHeaders()
 {
     RequestParser rp(_requestHeaders);
-    _httpRequest->_relativeURL = rp.getRelativeURL();
     _httpRequest->_method = rp.getRequestMethod();
+    _httpRequest->_relativeURL = rp.getRelativeURL();
     _httpRequest->_protocal = rp.getRequestProtocal();
     _httpRequest->_host = rp.getHost();
     _httpRequest->_connectionStatus = rp.getConnectionStatus();
+    // here to check the connection Status
+    if (_httpRequest->_connectionStatus.compare("keep-alive"))
+        _sock.Close();
+    
+    //----------------------------------------------------------
     _httpRequest->_content_Length = rp.getContentLength();
     _httpRequest->_encoding = rp.getAcceptEncoding();
     _httpRequest->_content_Type = rp.getContentType();
-    _requestHeaders=rp.TrimedHeaders();
+    //_requestHeaders=rp.TrimedHeaders();
     getRequestMessagebody(&_httpRequest->_requestContent);
 }
 
@@ -75,7 +83,6 @@ void ClientHandler::run() {
     pIRH = RequestHandlerFactory::CreateRequestHandler(*_httpRequest);
     std::string headers = pIRH->getResponseHeaders();
     _sock.Send(headers.c_str(),headers.size());
-    std::cout<<headers<<std::endl;
     int msgBodyLen = pIRH->getResponseLength();
     if(msgBodyLen > 0)
     {
@@ -84,7 +91,6 @@ void ClientHandler::run() {
         _sock.Send(msgBody,msgBodyLen);
     }
     _sock.Close(); //close or not
-   
 }
 
 

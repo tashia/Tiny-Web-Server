@@ -4,7 +4,19 @@
  *
  * Created on May 31, 2012, 9:20 PM
  */
-
+/*        Module Description
+ *======================================
+ * This package provides two classes.
+ * One is BaseHandler which is the base
+ * class of all handlers. It contains several
+ * common methods needed by almost all derived
+ * classes. The other class is Static Handler
+ * which is able to handler simple get and post
+ * request so far. Need to be modified in the
+ * future.
+ *
+ *
+ */
 #ifndef REQUESTHANDLERS_H
 #define	REQUESTHANDLERS_H
 

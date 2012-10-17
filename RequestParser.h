@@ -4,7 +4,16 @@
  *
  * Created on May 31, 2012, 7:58 PM
  */
-
+/*        Module Description
+ *======================================
+ * This package provides a RequestParser
+ * class to parse the http request. It help
+ * RequestHandler to fill the http request
+ * struct.
+ *
+ *
+ *
+ */
 #ifndef REQUESTPARSER_H
 #define	REQUESTPARSER_H
 
@@ -29,8 +38,9 @@ public:
 protected:
     std::string getHeaderContent(std::string header);
 private:
-    std::string _request; //must be const
+    std::string _request; 
     int _startPos;
+    bool _badRequest;
 };
 
 

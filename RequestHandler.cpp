@@ -5,10 +5,12 @@
 #include <time.h>
 #include <iostream>
 
-struct {
+struct TypePair {
     std::string ext;
     std::string filetype;
-} extensions [] = {
+};
+
+TypePair extensions [] = {
     {"gif", "image/gif"},
     {"jpg", "image/jpeg"},
     {"jpeg", "image/jpeg"},
@@ -161,17 +163,17 @@ void StaticResHandler::DoProcess() {
 void StaticResHandler::getContentType(const std::string& relativeURL) {
     std::string suffix;
     size_t begin;
-    bool isTypeSupport = false;
+    bool typeSupport = false;
     begin = relativeURL.find_last_of('.');
     suffix = relativeURL.substr(begin + 1);
     for (int i = 0; extensions[i].ext != "0"; i++) {
         if (suffix.compare(extensions[i].ext) == 0) {
             this->setContentType(extensions[i].filetype);
-            isTypeSupport = true;
+            typeSupport = true;
             break;
         }
     }
-    if (!isTypeSupport) {
+    if (!typeSupport) {
         this->setStatus("401 Type does not support");
         _continue = false;
     }
@@ -181,7 +183,6 @@ void StaticResHandler::getContentType(const std::string& relativeURL) {
 void StaticResHandler::ResourceRetrieve(const std::string& URI)
 {
      std::ifstream::pos_type size;
-    // std::cout<<" uri is "<<URI<<std::endl;
     /* ios::ate set initial position at the end of the file, so tellg() give the size of the file*/
     std::ifstream resource(URI.substr(1).c_str(), std::ios::in | std::ios::binary | std::ios::ate);
     if (resource.is_open()) {

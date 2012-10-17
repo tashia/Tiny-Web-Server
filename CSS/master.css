@@ -1,0 +1,99 @@
+/*
+ *  Basic CSS rule syntax
+ *  selector {
+ *    property: value;
+ *    property: value;
+ *  }
+ * */
+
+p{
+/* font size-- units: pixels(px) vs. points(pt) vs. m-size(em)*/
+  font-size: 14pt;
+  font-weight: bold;
+  font-style: italic;
+/* text align */ 
+  text-align: center;
+  width: 400px; /* 60% */
+  background-color: green;
+}
+/*grouping styles*/
+h1,h2{ color: blue;
+}
+/* CSS class selectors */
+
+p.sampleclass{
+  background-color: yellow;
+}
+
+/* class selectors without element */
+/* selectively applies a CSS rule to any element that is part
+ *  of the class named standout */
+.standout{
+  color: red;
+  font-family: cursive;
+}
+
+/* CSS ID selectors */
+/* selectively applies a CSS rule to only the PARAGRAPHS that has
+ * the id particular ID named IDSelector*/
+/* p can be omitted */
+p#IDSelector {
+  font-style: italic;
+  font-family: "Garamond", serif;
+}
+
+/* Context selectors */
+/* selector1 selector2 {
+ *    properties
+ * }
+ *
+ * applies the given properties to selector2 only if it is inside
+ * a selector1 on the page
+ * */
+
+/*
+ *  selector1 > selector2 {
+ *  properties
+ *  }
+ *
+ *  applies the given properties to selector2 only if it is directly
+ *  inside a selector on the page( selector1 tag is immediately 
+ *  inside selector2 with no tags in between)
+ * */
+
+/* Pseudo classes */
+a:link {color: #FF0000}     /* unvisited link */
+a:visited {color: #00FF00}  /* visited link */
+a:hover {color: #FF00FF}    /* mouse over link */
+a:active {color: #0000FF}   /* selected link */
+
+/* Form Sun Yat University 
+ *=============================
+ *  SECTIONS OF A PAGE : <div>
+ *  a tag used to indicate a logical section or
+ *  area of a page
+ *
+ *  Inline Section: <span>
+ *
+ * */
+
+/* A block element is an element that takes up the full width
+ * available, and has a line break before and after it.*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

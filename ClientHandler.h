@@ -4,7 +4,19 @@
  *
  * Created on May 31, 2012, 7:46 PM
  */
-
+/*        Module Description
+ *======================================
+ * This ClientHandler class is a derived class of
+ * ThreadBase, it is constructed by taking a socket.
+ * It provides the public method getRequestHeaders(),
+ * so client is able to track the httprequest. However,
+ * it will not disclose any content to the client. 
+ * Private scope contains several helper functions to
+ * parse the request step by step.
+ *
+ *
+ *
+ */
 #ifndef CLIENTHANDLER_H
 #define	CLIENTHANDLER_H
 
@@ -20,8 +32,6 @@ class ClientHandler : public ThreadBase
 public:
     ClientHandler(Socket& sock);
     std::string getRequestHeaders();
-  //  std::string getReponseHeaders();
-  //  void ProcessRequest();
     virtual ~ClientHandler();
 private:
     void ReadHeaders();

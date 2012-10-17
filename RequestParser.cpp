@@ -1,43 +1,55 @@
 #include "RequestParser.h"
 #include <sstream>
+#include <ctype.h>
 #include <iostream>
 
 std::string Methods[] = {"GET ", "POST ", "PUT ", "DELETE ", "HEAD ", ""};
 
 //--------------< constructor >----------------------------------
 
-RequestParser::RequestParser(std::string& request) : _request(request) {
-    for (int i = 0; !Methods[i].empty(); i++) {
-        _startPos = _request.find(Methods[i]);
-        if (_startPos != std::string::npos)
-            break;
-        _startPos = 0;
-    }
+RequestParser::RequestParser(std::string& request) : _request(request),
+                                                     _badRequest(false),
+                                                     _startPos(0)
+{
 }
 
 //--------------< get Http method>----------------------------------------------
 
 std::string RequestParser::getRequestMethod() {
+    int i=0;
+    for (i = 0; !Methods[i].empty(); i++) {
+        _startPos = _request.find(Methods[i]);
+        if (_startPos != std::string::npos)
+            break;
+    }
+    if (Methods[i].empty()) {
+        _badRequest = true;
+        return "";
+    }
     size_t end;
     end = _request.find(' ', _startPos);
-    if (end == std::string::npos || end == 0)
+    if (end == std::string::npos || end == 0){
+        _badRequest = true;
         return "";
+    }
     return _request.substr(_startPos, end - _startPos);
 }
 
 //--------------< get relative URL>---------------------------------------------
 
 std::string RequestParser::getRelativeURL() {
+    if(_badRequest) return "";
     size_t begin, end;
     begin = _request.find('/', _startPos);
-    if (begin == std::string::npos)
-        return "";
+    if (begin == std::string::npos){
+        _badRequest = true;
+        return "";}
     end = _request.find(' ', begin);
-    if (begin == std::string::npos)
+    if (begin == std::string::npos){
+        _badRequest = true;
         return "";
-
+    }
     return _request.substr(begin, end - begin);
-
 }
 
 //--------------< get request protocal>-----------------------------------------

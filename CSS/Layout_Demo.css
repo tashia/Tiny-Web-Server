@@ -1,0 +1,25 @@
+/* CSS Box model*/
+/*=================================*/
+/*
+ * for layout purposes, every element is composed of:
+ *   the actual element's content
+ *   a BORDER around the element
+ *   padding between the content and the border(inside)
+ *   a MARGIN between the border and other content(outside)
+ * */
+
+h1{ /* check border properties : thickness, style, color */
+  border: 5px solid red;
+  padding: 20px;
+  margin: 70px; 
+}
+
+p{ width: 500px; margin-left: auto;}
+
+/* common float bug: missing width
+ *  often floating block elements must have 
+ *  a width property value
+ *  if no width is specified, the floating 
+ *  element may occupy 100% of the page width,
+ *  so no content can wrap around it*/
+

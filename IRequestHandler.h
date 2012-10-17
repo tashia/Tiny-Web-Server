@@ -4,7 +4,16 @@
  *
  * Created on April 16, 2012, 1:05 PM
  */
-
+/*        Module Description
+ *======================================
+ * This header file provides an interface
+ * of request handler and two structures,
+ * which contain request information and
+ * response information respectively.
+ *
+ *
+ *
+ */
 #ifndef IREQUESTHANDLER_H
 #define	IREQUESTHANDLER_H
 
@@ -48,16 +57,6 @@ public:
     virtual void getResponseBody(char** memoryBlock)=0; /*dyly allocate inside*/
     virtual unsigned int getResponseLength()=0;
 };
-
-
-typedef struct{
-	std::string ext;
-	std::string filetype;
-} ext; 
-
-
-
-
 
 #endif	/* IREQUESTHANDLER_H */
 

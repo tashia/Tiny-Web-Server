@@ -1,0 +1,14 @@
+# ignored file list
+*.[oa]             # no .a files
+*~                 # no temp
+!lib.a             # do track lib.a, even you are ignoring
+Post/
+build/
+dist/
+files/
+images/
+nbproject/
+postDraft.h
+*.swp
+.dep.inc
+
