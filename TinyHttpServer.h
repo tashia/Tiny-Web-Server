@@ -9,15 +9,22 @@
 #define	TINYHTTPSERVER_H
 
 #include "Socket.h"
+#include "LThread.h"
+#include "Request.h"
 
-class HttpServer
+class HttpServer : public ThreadBase
 {
 public:
     HttpServer(int port);
     ~HttpServer();
     void BeginService();
+    void SendRequest( std::string ipaddr, int port, Request& req);
+    // for test purpose
+    std::string getResponse();
 private:
-    ServerSocket s_;            
+    void run();
+    ServerSocket s_;  
+    Socket _requestSock;
 };
 
 #endif	/* TINYHTTPSERVER_H */

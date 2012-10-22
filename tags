@@ -1,0 +1,726 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALLCONFS	nbproject/Makefile-impl.mk	/^ALLCONFS=Debug Release $/;"	m
+AS	nbproject/Makefile-Debug.mk	/^AS=as$/;"	m
+AS	nbproject/Makefile-Release.mk	/^AS=as$/;"	m
+ASFLAGS	nbproject/Makefile-Debug.mk	/^ASFLAGS=$/;"	m
+ASFLAGS	nbproject/Makefile-Release.mk	/^ASFLAGS=$/;"	m
+Accept	Socket.cpp	/^Socket ServerSocket::Accept() {$/;"	f	class:ServerSocket	signature:()
+Accept	Socket.h	/^    Socket Accept();$/;"	p	class:ServerSocket	access:public	signature:()
+BUILD_SUBPROJECTS	nbproject/Makefile-impl.mk	/^BUILD_SUBPROJECTS=${BUILD_SUBPROJECTS_${SUBPROJECTS}}$/;"	m
+BUILD_SUBPROJECTS_	nbproject/Makefile-impl.mk	/^BUILD_SUBPROJECTS_=.build-subprojects$/;"	m
+BUILD_SUBPROJECTS_NO	nbproject/Makefile-impl.mk	/^BUILD_SUBPROJECTS_NO=$/;"	m
+BaseHandler	RequestHandler.cpp	/^BaseHandler::BaseHandler(const Http_Request& h_request) : _http_Request(h_request),$/;"	f	class:BaseHandler	signature:(const Http_Request& h_request)
+BaseHandler	RequestHandlers.h	/^  BaseHandler(const Http_Request& h_request);$/;"	p	class:BaseHandler	access:public	signature:(const Http_Request& h_request)
+BaseHandler	RequestHandlers.h	/^class BaseHandler : public IRequestHandler {$/;"	c	inherits:IRequestHandler
+BaseHandler::BaseHandler	RequestHandler.cpp	/^BaseHandler::BaseHandler(const Http_Request& h_request) : _http_Request(h_request),$/;"	f	class:BaseHandler	signature:(const Http_Request& h_request)
+BaseHandler::BaseHandler	RequestHandlers.h	/^  BaseHandler(const Http_Request& h_request);$/;"	p	class:BaseHandler	access:public	signature:(const Http_Request& h_request)
+BaseHandler::DoProcess	RequestHandlers.h	/^  virtual void DoProcess()=0;$/;"	p	class:BaseHandler	access:public	signature:()
+BaseHandler::_hasProcessed	RequestHandlers.h	/^  bool _hasProcessed;$/;"	m	class:BaseHandler	access:protected
+BaseHandler::_http_Request	RequestHandlers.h	/^  const Http_Request& _http_Request;$/;"	m	class:BaseHandler	access:protected
+BaseHandler::_http_Response	RequestHandlers.h	/^  Http_Response* _http_Response;$/;"	m	class:BaseHandler	access:private
+BaseHandler::getCurrentTime	RequestHandler.cpp	/^std::string BaseHandler::getCurrentTime() {$/;"	f	class:BaseHandler	signature:()
+BaseHandler::getCurrentTime	RequestHandlers.h	/^  std::string getCurrentTime();$/;"	p	class:BaseHandler	access:public	signature:()
+BaseHandler::getResponseBody	RequestHandler.cpp	/^void BaseHandler::getResponseBody(char** memoryBlock)$/;"	f	class:BaseHandler	signature:(char** memoryBlock)
+BaseHandler::getResponseBody	RequestHandlers.h	/^  virtual void getResponseBody(char** memoryBlock);$/;"	p	class:BaseHandler	access:public	signature:(char** memoryBlock)
+BaseHandler::getResponseHeaders	RequestHandler.cpp	/^std::string BaseHandler::getResponseHeaders() {$/;"	f	class:BaseHandler	signature:()
+BaseHandler::getResponseHeaders	RequestHandlers.h	/^  virtual std::string getResponseHeaders();$/;"	p	class:BaseHandler	access:public	signature:()
+BaseHandler::getResponseLength	RequestHandler.cpp	/^unsigned int BaseHandler::getResponseLength() {$/;"	f	class:BaseHandler	signature:()
+BaseHandler::getResponseLength	RequestHandlers.h	/^  unsigned int getResponseLength();$/;"	p	class:BaseHandler	access:public	signature:()
+BaseHandler::setConnectionStatus	RequestHandler.cpp	/^void BaseHandler::setConnectionStatus(std::string stat) {$/;"	f	class:BaseHandler	signature:(std::string stat)
+BaseHandler::setConnectionStatus	RequestHandlers.h	/^  void setConnectionStatus(std::string stat);$/;"	p	class:BaseHandler	access:protected	signature:(std::string stat)
+BaseHandler::setContentLength	RequestHandler.cpp	/^void BaseHandler::setContentLength(int len) {$/;"	f	class:BaseHandler	signature:(int len)
+BaseHandler::setContentLength	RequestHandlers.h	/^  void setContentLength(int len);$/;"	p	class:BaseHandler	access:protected	signature:(int len)
+BaseHandler::setContentType	RequestHandler.cpp	/^void BaseHandler::setContentType(std::string type) {$/;"	f	class:BaseHandler	signature:(std::string type)
+BaseHandler::setContentType	RequestHandlers.h	/^  void setContentType(std::string type);$/;"	p	class:BaseHandler	access:protected	signature:(std::string type)
+BaseHandler::setMsgBody	RequestHandler.cpp	/^void BaseHandler::setMsgBody(char* res)$/;"	f	class:BaseHandler	signature:(char* res)
+BaseHandler::setMsgBody	RequestHandlers.h	/^  void setMsgBody(char* res);$/;"	p	class:BaseHandler	access:protected	signature:(char* res)
+BaseHandler::setProtocal	RequestHandler.cpp	/^void BaseHandler::setProtocal(std::string protocal) {$/;"	f	class:BaseHandler	signature:(std::string protocal)
+BaseHandler::setProtocal	RequestHandlers.h	/^  void setProtocal(std::string protocal);$/;"	p	class:BaseHandler	access:protected	signature:(std::string protocal)
+BaseHandler::setStatus	RequestHandler.cpp	/^void BaseHandler::setStatus(std::string stat) {$/;"	f	class:BaseHandler	signature:(std::string stat)
+BaseHandler::setStatus	RequestHandlers.h	/^  void setStatus(std::string stat);$/;"	p	class:BaseHandler	access:protected	signature:(std::string stat)
+BaseHandler::sizeToString	RequestHandler.cpp	/^std::string BaseHandler::sizeToString(size_t size) {$/;"	f	class:BaseHandler	signature:(size_t size)
+BaseHandler::sizeToString	RequestHandlers.h	/^  std::string sizeToString(size_t size);$/;"	p	class:BaseHandler	access:public	signature:(size_t size)
+BaseHandler::~BaseHandler	RequestHandler.cpp	/^BaseHandler::~BaseHandler()$/;"	f	class:BaseHandler	signature:()
+BaseHandler::~BaseHandler	RequestHandlers.h	/^  virtual ~BaseHandler();$/;"	p	class:BaseHandler	access:public	signature:()
+BeginService	TinyHttpServer.cpp	/^void HttpServer::BeginService() {$/;"	f	class:HttpServer	signature:()
+BeginService	TinyHttpServer.h	/^    void BeginService();$/;"	p	class:HttpServer	access:public	signature:()
+Bind	Socket.cpp	/^void ServerSocket::Bind(int port, const char* addr, int backlog) {$/;"	f	class:ServerSocket	signature:(int port, const char* addr, int backlog)
+Bind	Socket.h	/^    void Bind(int port,const char* addr="localhost", int backlog=10);$/;"	p	class:ServerSocket	access:public	signature:(int port,const char* addr=Ó, int backlog=10)
+CC	nbproject/Makefile-Debug.mk	/^CC=gcc$/;"	m
+CC	nbproject/Makefile-Release.mk	/^CC=gcc$/;"	m
+CCADMIN	Makefile	/^CCADMIN=CCadmin$/;"	m
+CCADMIN	nbproject/Makefile-Debug.mk	/^CCADMIN=CCadmin$/;"	m
+CCADMIN	nbproject/Makefile-Release.mk	/^CCADMIN=CCadmin$/;"	m
+CCC	nbproject/Makefile-Debug.mk	/^CCC=g++$/;"	m
+CCC	nbproject/Makefile-Release.mk	/^CCC=g++$/;"	m
+CCFLAGS	nbproject/Makefile-Debug.mk	/^CCFLAGS=$/;"	m
+CCFLAGS	nbproject/Makefile-Release.mk	/^CCFLAGS=$/;"	m
+CFLAGS	nbproject/Makefile-Debug.mk	/^CFLAGS=$/;"	m
+CFLAGS	nbproject/Makefile-Release.mk	/^CFLAGS=$/;"	m
+CLEAN_SUBPROJECTS	nbproject/Makefile-impl.mk	/^CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}$/;"	m
+CLEAN_SUBPROJECTS_	nbproject/Makefile-impl.mk	/^CLEAN_SUBPROJECTS_=.clean-subprojects$/;"	m
+CLEAN_SUBPROJECTS_NO	nbproject/Makefile-impl.mk	/^CLEAN_SUBPROJECTS_NO=$/;"	m
+CLIENTHANDLER_H	ClientHandler.h	21;"	d
+CND_ARTIFACT_DIR_Debug	nbproject/Makefile-variables.mk	/^CND_ARTIFACT_DIR_Debug=dist\/Debug\/GNU-Linux-x86$/;"	m
+CND_ARTIFACT_DIR_Release	nbproject/Makefile-variables.mk	/^CND_ARTIFACT_DIR_Release=dist\/Release\/GNU-Linux-x86$/;"	m
+CND_ARTIFACT_NAME_Debug	nbproject/Makefile-variables.mk	/^CND_ARTIFACT_NAME_Debug=tinyhttpserver$/;"	m
+CND_ARTIFACT_NAME_Release	nbproject/Makefile-variables.mk	/^CND_ARTIFACT_NAME_Release=tinyhttpserver$/;"	m
+CND_ARTIFACT_PATH_Debug	nbproject/Makefile-variables.mk	/^CND_ARTIFACT_PATH_Debug=dist\/Debug\/GNU-Linux-x86\/tinyhttpserver$/;"	m
+CND_ARTIFACT_PATH_Release	nbproject/Makefile-variables.mk	/^CND_ARTIFACT_PATH_Release=dist\/Release\/GNU-Linux-x86\/tinyhttpserver$/;"	m
+CND_BASEDIR	nbproject/Makefile-variables.mk	/^CND_BASEDIR=`pwd`$/;"	m
+CND_BUILDDIR	nbproject/Makefile-Debug.mk	/^CND_BUILDDIR=build$/;"	m
+CND_BUILDDIR	nbproject/Makefile-Release.mk	/^CND_BUILDDIR=build$/;"	m
+CND_BUILDDIR	nbproject/Makefile-variables.mk	/^CND_BUILDDIR=build$/;"	m
+CND_CONF	nbproject/Makefile-Debug.mk	/^CND_CONF=Debug$/;"	m
+CND_CONF	nbproject/Makefile-Release.mk	/^CND_CONF=Release$/;"	m
+CND_DISTDIR	nbproject/Makefile-Debug.mk	/^CND_DISTDIR=dist$/;"	m
+CND_DISTDIR	nbproject/Makefile-Release.mk	/^CND_DISTDIR=dist$/;"	m
+CND_DISTDIR	nbproject/Makefile-variables.mk	/^CND_DISTDIR=dist$/;"	m
+CND_PACKAGE_DIR_Debug	nbproject/Makefile-variables.mk	/^CND_PACKAGE_DIR_Debug=dist\/Debug\/GNU-Linux-x86\/package$/;"	m
+CND_PACKAGE_DIR_Release	nbproject/Makefile-variables.mk	/^CND_PACKAGE_DIR_Release=dist\/Release\/GNU-Linux-x86\/package$/;"	m
+CND_PACKAGE_NAME_Debug	nbproject/Makefile-variables.mk	/^CND_PACKAGE_NAME_Debug=tinyhttpserver.tar$/;"	m
+CND_PACKAGE_NAME_Release	nbproject/Makefile-variables.mk	/^CND_PACKAGE_NAME_Release=tinyhttpserver.tar$/;"	m
+CND_PACKAGE_PATH_Debug	nbproject/Makefile-variables.mk	/^CND_PACKAGE_PATH_Debug=dist\/Debug\/GNU-Linux-x86\/package\/tinyhttpserver.tar$/;"	m
+CND_PACKAGE_PATH_Release	nbproject/Makefile-variables.mk	/^CND_PACKAGE_PATH_Release=dist\/Release\/GNU-Linux-x86\/package\/tinyhttpserver.tar$/;"	m
+CND_PLATFORM	nbproject/Makefile-Debug.mk	/^CND_PLATFORM=GNU-Linux-x86$/;"	m
+CND_PLATFORM	nbproject/Makefile-Release.mk	/^CND_PLATFORM=GNU-Linux-x86$/;"	m
+CND_PLATFORM_Debug	nbproject/Makefile-variables.mk	/^CND_PLATFORM_Debug=GNU-Linux-x86$/;"	m
+CND_PLATFORM_Release	nbproject/Makefile-variables.mk	/^CND_PLATFORM_Release=GNU-Linux-x86$/;"	m
+CONF	nbproject/Makefile-impl.mk	/^CONF=${DEFAULTCONF}$/;"	m
+CP	Makefile	/^CP=cp$/;"	m
+CP	nbproject/Makefile-Debug.mk	/^CP=cp$/;"	m
+CP	nbproject/Makefile-Release.mk	/^CP=cp$/;"	m
+CXX	nbproject/Makefile-Debug.mk	/^CXX=g++$/;"	m
+CXX	nbproject/Makefile-Release.mk	/^CXX=g++$/;"	m
+CXXFLAGS	nbproject/Makefile-Debug.mk	/^CXXFLAGS=$/;"	m
+CXXFLAGS	nbproject/Makefile-Release.mk	/^CXXFLAGS=$/;"	m
+ClientHandler	ClientHandler.cpp	/^ClientHandler::ClientHandler(Socket& sock) : _sock(sock) {$/;"	f	class:ClientHandler	signature:(Socket& sock)
+ClientHandler	ClientHandler.h	/^    ClientHandler(Socket& sock);$/;"	p	class:ClientHandler	access:public	signature:(Socket& sock)
+ClientHandler	ClientHandler.h	/^class ClientHandler : public ThreadBase$/;"	c	inherits:ThreadBase
+ClientHandler::ClientHandler	ClientHandler.cpp	/^ClientHandler::ClientHandler(Socket& sock) : _sock(sock) {$/;"	f	class:ClientHandler	signature:(Socket& sock)
+ClientHandler::ClientHandler	ClientHandler.h	/^    ClientHandler(Socket& sock);$/;"	p	class:ClientHandler	access:public	signature:(Socket& sock)
+ClientHandler::ParseHeaders	ClientHandler.cpp	/^void ClientHandler::ParseHeaders()$/;"	f	class:ClientHandler	signature:()
+ClientHandler::ParseHeaders	ClientHandler.h	/^    void ParseHeaders();$/;"	p	class:ClientHandler	access:private	signature:()
+ClientHandler::ReadHeaders	ClientHandler.cpp	/^void ClientHandler::ReadHeaders() { \/\/\\n\\r\\n is the terminate mark, read char by char$/;"	f	class:ClientHandler	signature:()
+ClientHandler::ReadHeaders	ClientHandler.h	/^    void ReadHeaders();$/;"	p	class:ClientHandler	access:private	signature:()
+ClientHandler::_hasParsed	ClientHandler.h	/^    bool _hasParsed;$/;"	m	class:ClientHandler	access:private
+ClientHandler::_httpRequest	ClientHandler.h	/^    Http_Request* _httpRequest;$/;"	m	class:ClientHandler	access:private
+ClientHandler::_requestHeaders	ClientHandler.h	/^    std::string _requestHeaders;$/;"	m	class:ClientHandler	access:private
+ClientHandler::_sock	ClientHandler.h	/^    Socket _sock;$/;"	m	class:ClientHandler	access:private
+ClientHandler::getRequestHeaders	ClientHandler.cpp	/^std::string ClientHandler::getRequestHeaders()$/;"	f	class:ClientHandler	signature:()
+ClientHandler::getRequestHeaders	ClientHandler.h	/^    std::string getRequestHeaders();$/;"	p	class:ClientHandler	access:public	signature:()
+ClientHandler::getRequestMessagebody	ClientHandler.cpp	/^void ClientHandler::getRequestMessagebody(char** msgBuf)$/;"	f	class:ClientHandler	signature:(char** msgBuf)
+ClientHandler::getRequestMessagebody	ClientHandler.h	/^    void getRequestMessagebody(char** msgBuf);$/;"	p	class:ClientHandler	access:private	signature:(char** msgBuf)
+ClientHandler::pIRH	ClientHandler.h	/^    IRequestHandler *pIRH;$/;"	m	class:ClientHandler	access:private
+ClientHandler::run	ClientHandler.cpp	/^void ClientHandler::run() {$/;"	f	class:ClientHandler	signature:()
+ClientHandler::run	ClientHandler.h	/^    void run();$/;"	p	class:ClientHandler	access:private	signature:()
+ClientHandler::~ClientHandler	ClientHandler.cpp	/^ClientHandler::~ClientHandler() {$/;"	f	class:ClientHandler	signature:()
+ClientHandler::~ClientHandler	ClientHandler.h	/^    virtual ~ClientHandler();$/;"	p	class:ClientHandler	access:public	signature:()
+Close	Socket.cpp	/^void ServerSocket::Close() {$/;"	f	class:ServerSocket	signature:()
+Close	Socket.cpp	/^void Socket::Close() {$/;"	f	class:Socket	signature:()
+Close	Socket.h	/^    void Close(); $/;"	p	class:Socket	access:public	signature:()
+Close	Socket.h	/^    void Close();$/;"	p	class:ServerSocket	access:public	signature:()
+Connect	Socket.cpp	/^void Socket::Connect(const char* connectAddr, int port) {$/;"	f	class:Socket	signature:(const char* connectAddr, int port)
+Connect	Socket.h	/^    void Connect(const char* connectAddr, int port);$/;"	p	class:Socket	access:public	signature:(const char* connectAddr, int port)
+CreateRequestHandler	HandlerFactory.cpp	/^IRequestHandler* RequestHandlerFactory::CreateRequestHandler(const Http_Request& h_request) {$/;"	f	class:RequestHandlerFactory	signature:(const Http_Request& h_request)
+CreateRequestHandler	HandlerFactory.h	/^   static IRequestHandler* CreateRequestHandler(const Http_Request& h_request);$/;"	p	class:RequestHandlerFactory	access:public	signature:(const Http_Request& h_request)
+DEFAULTCONF	nbproject/Makefile-impl.mk	/^DEFAULTCONF=Debug$/;"	m
+DoProcess	RequestHandler.cpp	/^void GetHandler::DoProcess() {$/;"	f	class:GetHandler	signature:()
+DoProcess	RequestHandler.cpp	/^void PostHandler::DoProcess()$/;"	f	class:PostHandler	signature:()
+DoProcess	RequestHandlers.h	/^  virtual void DoProcess()=0;$/;"	p	class:BaseHandler	access:public	signature:()
+DoProcess	RequestHandlers.h	/^  void DoProcess();$/;"	p	class:PostHandler	access:public	signature:()
+DoProcess	RequestHandlers.h	/^  void DoProcess();$/;"	p	class:StaticResHandler	access:public	signature:()
+FC	nbproject/Makefile-Debug.mk	/^FC=gfortran$/;"	m
+FC	nbproject/Makefile-Release.mk	/^FC=gfortran$/;"	m
+FFLAGS	nbproject/Makefile-Debug.mk	/^FFLAGS=$/;"	m
+FFLAGS	nbproject/Makefile-Release.mk	/^FFLAGS=$/;"	m
+GLOBALHELPFUNCTIONS_H	GlobalHelpFunctions.h	2;"	d
+GREP	nbproject/Makefile-Debug.mk	/^GREP=grep$/;"	m
+GREP	nbproject/Makefile-Release.mk	/^GREP=grep$/;"	m
+GetHandler	RequestHandler.cpp	/^GetHandler::GetHandler(const Http_Request& h_request)$/;"	f	class:GetHandler	signature:(const Http_Request& h_request)
+GetHandler::DoProcess	RequestHandler.cpp	/^void GetHandler::DoProcess() {$/;"	f	class:GetHandler	signature:()
+GetHandler::GetHandler	RequestHandler.cpp	/^GetHandler::GetHandler(const Http_Request& h_request)$/;"	f	class:GetHandler	signature:(const Http_Request& h_request)
+GetHandler::ResourceRetrieve	RequestHandler.cpp	/^void GetHandler::ResourceRetrieve(const std::string& URI)$/;"	f	class:GetHandler	signature:(const std::string& URI)
+GetHandler::ResourceSave	RequestHandler.cpp	/^void GetHandler::ResourceSave(const std::string& URI, char* memBlock, int len)$/;"	f	class:GetHandler	signature:(const std::string& URI, char* memBlock, int len)
+GetHandler::getContentType	RequestHandler.cpp	/^void GetHandler::getContentType(const std::string& relativeURL) {$/;"	f	class:GetHandler	signature:(const std::string& relativeURL)
+GetLastMsg	Sockets.cpp	/^std::string SocketSystem::GetLastMsg(bool WantSocketMsg) {$/;"	f	class:SocketSystem	signature:(bool WantSocketMsg)
+GetLastMsg	Sockets.h	/^    std::string GetLastMsg(bool WantSocketMsg=true);$/;"	p	class:SocketSystem	access:public	signature:(bool WantSocketMsg=true)
+GetType	IRequestHandler.h	/^enum Request_Type { GetType, PostType };$/;"	e	enum:Request_Type
+HANDLERFACTORY_H	HandlerFactory.h	9;"	d
+HttpServer	TinyHttpServer.cpp	/^HttpServer::HttpServer(int port) {$/;"	f	class:HttpServer	signature:(int port)
+HttpServer	TinyHttpServer.h	/^    HttpServer(int port);$/;"	p	class:HttpServer	access:public	signature:(int port)
+HttpServer	TinyHttpServer.h	/^class HttpServer : public ThreadBase$/;"	c	inherits:ThreadBase
+HttpServer::BeginService	TinyHttpServer.cpp	/^void HttpServer::BeginService() {$/;"	f	class:HttpServer	signature:()
+HttpServer::BeginService	TinyHttpServer.h	/^    void BeginService();$/;"	p	class:HttpServer	access:public	signature:()
+HttpServer::HttpServer	TinyHttpServer.cpp	/^HttpServer::HttpServer(int port) {$/;"	f	class:HttpServer	signature:(int port)
+HttpServer::HttpServer	TinyHttpServer.h	/^    HttpServer(int port);$/;"	p	class:HttpServer	access:public	signature:(int port)
+HttpServer::SendRequest	TinyHttpServer.cpp	/^void HttpServer::SendRequest(const std::string& ipaddr, const int port, const Request& req) {$/;"	f	class:HttpServer	signature:(const std::string& ipaddr, const int port, const Request& req)
+HttpServer::SendRequest	TinyHttpServer.h	/^    void SendRequest(const std::string& ipaddr, const int port,const Request& req);$/;"	p	class:HttpServer	access:public	signature:(const std::string& ipaddr, const int port,const Request& req)
+HttpServer::_requestSock	TinyHttpServer.h	/^    Socket _requestSock;$/;"	m	class:HttpServer	access:private
+HttpServer::getResponse	TinyHttpServer.cpp	/^std::string HttpServer::getResponse()$/;"	f	class:HttpServer	signature:()
+HttpServer::getResponse	TinyHttpServer.h	/^    std::string getResponse();$/;"	p	class:HttpServer	access:public	signature:()
+HttpServer::run	TinyHttpServer.cpp	/^void HttpServer::run() {$/;"	f	class:HttpServer	signature:()
+HttpServer::run	TinyHttpServer.h	/^    void run();$/;"	p	class:HttpServer	access:private	signature:()
+HttpServer::s_	TinyHttpServer.h	/^    ServerSocket s_;  $/;"	m	class:HttpServer	access:private
+HttpServer::~HttpServer	TinyHttpServer.cpp	/^HttpServer::~HttpServer() {$/;"	f	class:HttpServer	signature:()
+HttpServer::~HttpServer	TinyHttpServer.h	/^    ~HttpServer();$/;"	p	class:HttpServer	access:public	signature:()
+Http_Request	IRequestHandler.h	/^}Http_Request;$/;"	t	typeref:struct:__anon1
+Http_Response	IRequestHandler.h	/^    Http_Response(): _reponse_Resource(0){}$/;"	f	struct:Http_Response	access:public	signature:()
+Http_Response	IRequestHandler.h	/^struct Http_Response$/;"	s
+Http_Response::Http_Response	IRequestHandler.h	/^    Http_Response(): _reponse_Resource(0){}$/;"	f	struct:Http_Response	access:public	signature:()
+Http_Response::_connectionStatus	IRequestHandler.h	/^    std::string _connectionStatus;$/;"	m	struct:Http_Response	access:public
+Http_Response::_content_Length	IRequestHandler.h	/^    int _content_Length;$/;"	m	struct:Http_Response	access:public
+Http_Response::_content_Type	IRequestHandler.h	/^    std::string _content_Type;$/;"	m	struct:Http_Response	access:public
+Http_Response::_last_Modified_Time	IRequestHandler.h	/^    std::string _last_Modified_Time;$/;"	m	struct:Http_Response	access:public
+Http_Response::_protocal	IRequestHandler.h	/^    std::string _protocal;$/;"	m	struct:Http_Response	access:public
+Http_Response::_reponse_Resource	IRequestHandler.h	/^    char* _reponse_Resource;$/;"	m	struct:Http_Response	access:public
+Http_Response::_status	IRequestHandler.h	/^    std::string _status;$/;"	m	struct:Http_Response	access:public
+IREQUESTHANDLER_H	IRequestHandler.h	18;"	d
+IRequestHandler	IRequestHandler.h	/^class IRequestHandler$/;"	c
+IRequestHandler::getResponseBody	IRequestHandler.h	/^    virtual void getResponseBody(char** memoryBlock)=0; \/*dyly allocate inside*\/$/;"	p	class:IRequestHandler	access:public	signature:(char** memoryBlock)
+IRequestHandler::getResponseHeaders	IRequestHandler.h	/^    virtual std::string getResponseHeaders()=0;$/;"	p	class:IRequestHandler	access:public	signature:()
+IRequestHandler::getResponseLength	IRequestHandler.h	/^    virtual unsigned int getResponseLength()=0;$/;"	p	class:IRequestHandler	access:public	signature:()
+IRequestHandler::~IRequestHandler	IRequestHandler.h	/^    virtual ~IRequestHandler(){}$/;"	f	class:IRequestHandler	access:public	signature:()
+Init	Socket.cpp	/^void SocketAssistant::Init(const char* nodename, const char* sevname) {$/;"	f	class:SocketAssistant	signature:(const char* nodename, const char* sevname)
+Init	Socket.h	/^    void Init(const char* nodename,const char* sevname=NULL);$/;"	p	class:SocketAssistant	access:private	signature:(const char* nodename,const char* sevname=NULL)
+IntToString	GlobalHelpFunctions.h	/^std::string IntToString(int length) {$/;"	f	signature:(int length)
+InvalidSocketCount	Sockets.h	/^    volatile long InvalidSocketCount;$/;"	m	class:SocketListener	access:private
+LDLIBSOPTIONS	nbproject/Makefile-Debug.mk	/^LDLIBSOPTIONS=-lpthread$/;"	m
+LDLIBSOPTIONS	nbproject/Makefile-Release.mk	/^LDLIBSOPTIONS=$/;"	m
+LTHREAD_H	LThread.h	9;"	d
+MKDIR	Makefile	/^MKDIR=mkdir$/;"	m
+MKDIR	nbproject/Makefile-Debug.mk	/^MKDIR=mkdir$/;"	m
+MKDIR	nbproject/Makefile-Release.mk	/^MKDIR=mkdir$/;"	m
+MaxSize	ClientHandler.h	28;"	d
+Methods	RequestParser.cpp	/^std::string Methods[] = {"GET ", "POST ", "PUT ", "DELETE ", "HEAD ", ""};$/;"	v
+NM	nbproject/Makefile-Debug.mk	/^NM=nm$/;"	m
+NM	nbproject/Makefile-Release.mk	/^NM=nm$/;"	m
+OBJECTDIR	nbproject/Makefile-Debug.mk	/^OBJECTDIR=${CND_BUILDDIR}\/${CND_CONF}\/${CND_PLATFORM}$/;"	m
+OBJECTDIR	nbproject/Makefile-Release.mk	/^OBJECTDIR=${CND_BUILDDIR}\/${CND_CONF}\/${CND_PLATFORM}$/;"	m
+OBJECTFILES	nbproject/Makefile-Debug.mk	/^OBJECTFILES= \\$/;"	m
+OBJECTFILES	nbproject/Makefile-Release.mk	/^OBJECTFILES= \\$/;"	m
+POSTDRAFT_H	postDraft.h	2;"	d
+PROJECTNAME	nbproject/Makefile-impl.mk	/^PROJECTNAME=TinyHttpServer$/;"	m
+ParseHeaders	ClientHandler.cpp	/^void ClientHandler::ParseHeaders()$/;"	f	class:ClientHandler	signature:()
+ParseHeaders	ClientHandler.h	/^    void ParseHeaders();$/;"	p	class:ClientHandler	access:private	signature:()
+PostHandler	RequestHandler.cpp	/^PostHandler::PostHandler(const Http_Request& h_request) : BaseHandler(h_request)$/;"	f	class:PostHandler	signature:(const Http_Request& h_request)
+PostHandler	RequestHandlers.h	/^  PostHandler (const Http_Request& h_request);$/;"	p	class:PostHandler	access:public	signature:(const Http_Request& h_request)
+PostHandler	RequestHandlers.h	/^class PostHandler : public BaseHandler {$/;"	c	inherits:BaseHandler
+PostHandler::DoProcess	RequestHandler.cpp	/^void PostHandler::DoProcess()$/;"	f	class:PostHandler	signature:()
+PostHandler::DoProcess	RequestHandlers.h	/^  void DoProcess();$/;"	p	class:PostHandler	access:public	signature:()
+PostHandler::PostHandler	RequestHandler.cpp	/^PostHandler::PostHandler(const Http_Request& h_request) : BaseHandler(h_request)$/;"	f	class:PostHandler	signature:(const Http_Request& h_request)
+PostHandler::PostHandler	RequestHandlers.h	/^  PostHandler (const Http_Request& h_request);$/;"	p	class:PostHandler	access:public	signature:(const Http_Request& h_request)
+PostHandler::ResourceSave	RequestHandler.cpp	/^void PostHandler::ResourceSave(const std::string& URI, char* memBlock, int len)$/;"	f	class:PostHandler	signature:(const std::string& URI, char* memBlock, int len)
+PostHandler::ResourceSave	RequestHandlers.h	/^  void ResourceSave(const std::string&URI, char* memBlock, int len);$/;"	p	class:PostHandler	access:private	signature:(const std::string&URI, char* memBlock, int len)
+PostHandler::~PostHandler	RequestHandlers.h	/^  virtual ~PostHandler ();$/;"	p	class:PostHandler	access:public	signature:()
+PostType	IRequestHandler.h	/^enum Request_Type { GetType, PostType };$/;"	e	enum:Request_Type
+RANLIB	nbproject/Makefile-Debug.mk	/^RANLIB=ranlib$/;"	m
+RANLIB	nbproject/Makefile-Release.mk	/^RANLIB=ranlib$/;"	m
+REQUESTHANDLERS_H	RequestHandlers.h	21;"	d
+REQUESTPARSER_H	RequestParser.h	18;"	d
+REQUEST_H	Request.h	2;"	d
+ReadHeaders	ClientHandler.cpp	/^void ClientHandler::ReadHeaders() { \/\/\\n\\r\\n is the terminate mark, read char by char$/;"	f	class:ClientHandler	signature:()
+ReadHeaders	ClientHandler.h	/^    void ReadHeaders();$/;"	p	class:ClientHandler	access:private	signature:()
+Receive	Socket.cpp	/^int Socket::Receive(char* recevStream, int len, int flags, int recevSize) {$/;"	f	class:Socket	signature:(char* recevStream, int len, int flags, int recevSize)
+Receive	Socket.h	/^    int Receive(char* recevStream, int len, int flags=0, int recevSize=3074); \/\/recev up to *len$/;"	p	class:Socket	access:public	signature:(char* recevStream, int len, int flags=0, int recevSize=3074)
+Request	Request.cpp	/^Request::Request(const std::string& method,$/;"	f	class:Request	signature:(const std::string& method, const std::string& url, const std::string& protocal)
+Request	Request.h	/^  Request (const std::string& method,$/;"	p	class:Request	access:public	signature:(const std::string& method, const std::string& url, const std::string& protocal)
+Request	Request.h	/^class Request {$/;"	c
+Request::Request	Request.cpp	/^Request::Request(const std::string& method,$/;"	f	class:Request	signature:(const std::string& method, const std::string& url, const std::string& protocal)
+Request::Request	Request.h	/^  Request (const std::string& method,$/;"	p	class:Request	access:public	signature:(const std::string& method, const std::string& url, const std::string& protocal)
+Request::_content	Request.h	/^  const char* _content;$/;"	m	class:Request	access:private
+Request::_headers	Request.h	/^  std::string _headers;$/;"	m	class:Request	access:private
+Request::_length	Request.h	/^  int _length;$/;"	m	class:Request	access:private
+Request::_method	Request.h	/^  std::string _method;$/;"	m	class:Request	access:private
+Request::_protocal	Request.h	/^  std::string _protocal;$/;"	m	class:Request	access:private
+Request::_url	Request.h	/^  std::string _url;$/;"	m	class:Request	access:private
+Request::addContentBody	Request.cpp	/^void Request::addContentBody(const char* contentBody,$/;"	f	class:Request	signature:(const char* contentBody, const int contentLength)
+Request::addContentBody	Request.h	/^  void addContentBody(const char* contentBody,$/;"	p	class:Request	access:public	signature:(const char* contentBody, const int contentLength)
+Request::appendHeader	Request.cpp	/^void Request::appendHeader(const std::string& header)$/;"	f	class:Request	signature:(const std::string& header)
+Request::appendHeader	Request.h	/^  void appendHeader(const std::string& header);$/;"	p	class:Request	access:public	signature:(const std::string& header)
+Request::getContentBody	Request.cpp	/^const char* Request::getContentBody()$/;"	f	class:Request	signature:()
+Request::getContentBody	Request.h	/^  const char* getContentBody();$/;"	p	class:Request	access:public	signature:()
+Request::getHeaderContent	Request.cpp	/^std::string Request::getHeaderContent(const std::string& headerName) const $/;"	f	class:Request	signature:(const std::string& headerName) const
+Request::getHeaderContent	Request.h	/^  std::string getHeaderContent(const std::string& headerName) const;$/;"	p	class:Request	access:public	signature:(const std::string& headerName) const
+Request::getLength	Request.h	/^  int getLength() { return _length;}$/;"	f	class:Request	access:public	signature:()
+Request::getRequest	Request.cpp	/^std::string Request::getRequest()$/;"	f	class:Request	signature:()
+Request::getRequest	Request.h	/^  std::string getRequest();$/;"	p	class:Request	access:public	signature:()
+Request::~Request	Request.cpp	/^Request::~Request()$/;"	f	class:Request	signature:()
+Request::~Request	Request.h	/^  virtual ~Request ();$/;"	p	class:Request	access:public	signature:()
+RequestHandlerFactory	HandlerFactory.h	/^class RequestHandlerFactory$/;"	c
+RequestHandlerFactory::CreateRequestHandler	HandlerFactory.cpp	/^IRequestHandler* RequestHandlerFactory::CreateRequestHandler(const Http_Request& h_request) {$/;"	f	class:RequestHandlerFactory	signature:(const Http_Request& h_request)
+RequestHandlerFactory::CreateRequestHandler	HandlerFactory.h	/^   static IRequestHandler* CreateRequestHandler(const Http_Request& h_request);$/;"	p	class:RequestHandlerFactory	access:public	signature:(const Http_Request& h_request)
+RequestParser	RequestParser.cpp	/^RequestParser::RequestParser(std::string& request) : _request(request),$/;"	f	class:RequestParser	signature:(std::string& request)
+RequestParser	RequestParser.h	/^    RequestParser(std::string& request) ;$/;"	p	class:RequestParser	access:public	signature:(std::string& request)
+RequestParser	RequestParser.h	/^class RequestParser {   $/;"	c
+RequestParser::RequestParser	RequestParser.cpp	/^RequestParser::RequestParser(std::string& request) : _request(request),$/;"	f	class:RequestParser	signature:(std::string& request)
+RequestParser::RequestParser	RequestParser.h	/^    RequestParser(std::string& request) ;$/;"	p	class:RequestParser	access:public	signature:(std::string& request)
+RequestParser::StringToInt	RequestParser.cpp	/^int RequestParser::StringToInt(std::string& str) {$/;"	f	class:RequestParser	signature:(std::string& str)
+RequestParser::StringToInt	RequestParser.h	/^    int StringToInt(std::string& str);$/;"	p	class:RequestParser	access:public	signature:(std::string& str)
+RequestParser::TrimedHeaders	RequestParser.cpp	/^std::string RequestParser::TrimedHeaders() {$/;"	f	class:RequestParser	signature:()
+RequestParser::TrimedHeaders	RequestParser.h	/^    std::string TrimedHeaders();   \/\/cut off redundant prefix if it has  $/;"	p	class:RequestParser	access:public	signature:()
+RequestParser::_badRequest	RequestParser.h	/^    bool _badRequest;$/;"	m	class:RequestParser	access:private
+RequestParser::_request	RequestParser.h	/^    std::string _request; $/;"	m	class:RequestParser	access:private
+RequestParser::_startPos	RequestParser.h	/^    int _startPos;$/;"	m	class:RequestParser	access:private
+RequestParser::getAcceptEncoding	RequestParser.cpp	/^std::string RequestParser::getAcceptEncoding() {$/;"	f	class:RequestParser	signature:()
+RequestParser::getAcceptEncoding	RequestParser.h	/^    std::string getAcceptEncoding();$/;"	p	class:RequestParser	access:public	signature:()
+RequestParser::getConnectionStatus	RequestParser.cpp	/^std::string RequestParser::getConnectionStatus() {$/;"	f	class:RequestParser	signature:()
+RequestParser::getConnectionStatus	RequestParser.h	/^    std::string getConnectionStatus();$/;"	p	class:RequestParser	access:public	signature:()
+RequestParser::getContentLength	RequestParser.cpp	/^int RequestParser::getContentLength() {$/;"	f	class:RequestParser	signature:()
+RequestParser::getContentLength	RequestParser.h	/^    int getContentLength();$/;"	p	class:RequestParser	access:public	signature:()
+RequestParser::getContentType	RequestParser.cpp	/^std::string RequestParser::getContentType() {$/;"	f	class:RequestParser	signature:()
+RequestParser::getContentType	RequestParser.h	/^    std::string getContentType();$/;"	p	class:RequestParser	access:public	signature:()
+RequestParser::getHeaderContent	RequestParser.cpp	/^std::string RequestParser::getHeaderContent(std::string header) {$/;"	f	class:RequestParser	signature:(std::string header)
+RequestParser::getHeaderContent	RequestParser.h	/^    std::string getHeaderContent(std::string header);$/;"	p	class:RequestParser	access:protected	signature:(std::string header)
+RequestParser::getHost	RequestParser.cpp	/^std::string RequestParser::getHost() {$/;"	f	class:RequestParser	signature:()
+RequestParser::getHost	RequestParser.h	/^    std::string getHost();$/;"	p	class:RequestParser	access:public	signature:()
+RequestParser::getRelativeURL	RequestParser.cpp	/^std::string RequestParser::getRelativeURL() {$/;"	f	class:RequestParser	signature:()
+RequestParser::getRelativeURL	RequestParser.h	/^    std::string getRelativeURL(); $/;"	p	class:RequestParser	access:public	signature:()
+RequestParser::getRequestMethod	RequestParser.cpp	/^std::string RequestParser::getRequestMethod() {$/;"	f	class:RequestParser	signature:()
+RequestParser::getRequestMethod	RequestParser.h	/^    std::string getRequestMethod();$/;"	p	class:RequestParser	access:public	signature:()
+RequestParser::getRequestProtocal	RequestParser.cpp	/^std::string RequestParser::getRequestProtocal() {$/;"	f	class:RequestParser	signature:()
+RequestParser::getRequestProtocal	RequestParser.h	/^    std::string getRequestProtocal();$/;"	p	class:RequestParser	access:public	signature:()
+RequestParser::~RequestParser	RequestParser.h	/^    ~RequestParser() {$/;"	f	class:RequestParser	access:public	signature:()
+Request_Type	IRequestHandler.h	/^enum Request_Type { GetType, PostType };$/;"	g
+ResourceRetrieve	RequestHandler.cpp	/^void GetHandler::ResourceRetrieve(const std::string& URI)$/;"	f	class:GetHandler	signature:(const std::string& URI)
+ResourceRetrieve	RequestHandlers.h	/^  void ResourceRetrieve(const std::string& URI);$/;"	p	class:StaticResHandler	access:private	signature:(const std::string& URI)
+ResourceRetrieve	Socket.cpp	/^int ResourceRetrieve(const std::string& URI, char** memblock) {$/;"	f	signature:(const std::string& URI, char** memblock)
+ResourceSave	RequestHandler.cpp	/^void GetHandler::ResourceSave(const std::string& URI, char* memBlock, int len)$/;"	f	class:GetHandler	signature:(const std::string& URI, char* memBlock, int len)
+ResourceSave	RequestHandler.cpp	/^void PostHandler::ResourceSave(const std::string& URI, char* memBlock, int len)$/;"	f	class:PostHandler	signature:(const std::string& URI, char* memBlock, int len)
+ResourceSave	RequestHandlers.h	/^  void ResourceSave(const std::string&URI, char* memBlock, int len);$/;"	p	class:PostHandler	access:private	signature:(const std::string&URI, char* memBlock, int len)
+ResourceSave	RequestHandlers.h	/^  void ResourceSave(const std::string&URI, char* memBlock, int len);$/;"	p	class:StaticResHandler	access:private	signature:(const std::string&URI, char* memBlock, int len)
+SOCKETS_H	Sockets.h	9;"	d
+SOCKET_H	Socket.h	33;"	d
+SUBPROJECTS	nbproject/Makefile-impl.mk	/^SUBPROJECTS=${SUB_${SUB}}$/;"	m
+SUB_no	nbproject/Makefile-impl.mk	/^SUB_no=NO$/;"	m
+Send	Socket.cpp	/^int Socket::Send(const char* msg, int len, int flags, int sendSize) {$/;"	f	class:Socket	signature:(const char* msg, int len, int flags, int sendSize)
+Send	Socket.h	/^    int Send(const char *msg, int len, int flags=0, int sendSize=3074); \/\/send up to *len$/;"	p	class:Socket	access:public	signature:(const char *msg, int len, int flags=0, int sendSize=3074)
+SendRequest	TinyHttpServer.cpp	/^void HttpServer::SendRequest(const std::string& ipaddr, const int port, const Request& req) {$/;"	f	class:HttpServer	signature:(const std::string& ipaddr, const int port, const Request& req)
+SendRequest	TinyHttpServer.h	/^    void SendRequest(const std::string& ipaddr, const int port,const Request& req);$/;"	p	class:HttpServer	access:public	signature:(const std::string& ipaddr, const int port,const Request& req)
+ServerSocket	Socket.cpp	/^ServerSocket::ServerSocket() {$/;"	f	class:ServerSocket	signature:()
+ServerSocket	Socket.h	/^    ServerSocket();$/;"	p	class:ServerSocket	access:public	signature:()
+ServerSocket	Socket.h	/^class ServerSocket$/;"	c
+ServerSocket::Accept	Socket.cpp	/^Socket ServerSocket::Accept() {$/;"	f	class:ServerSocket	signature:()
+ServerSocket::Accept	Socket.h	/^    Socket Accept();$/;"	p	class:ServerSocket	access:public	signature:()
+ServerSocket::Bind	Socket.cpp	/^void ServerSocket::Bind(int port, const char* addr, int backlog) {$/;"	f	class:ServerSocket	signature:(int port, const char* addr, int backlog)
+ServerSocket::Bind	Socket.h	/^    void Bind(int port,const char* addr="localhost", int backlog=10);$/;"	p	class:ServerSocket	access:public	signature:(int port,const char* addr=Ó, int backlog=10)
+ServerSocket::Close	Socket.cpp	/^void ServerSocket::Close() {$/;"	f	class:ServerSocket	signature:()
+ServerSocket::Close	Socket.h	/^    void Close();$/;"	p	class:ServerSocket	access:public	signature:()
+ServerSocket::ServerSocket	Socket.cpp	/^ServerSocket::ServerSocket() {$/;"	f	class:ServerSocket	signature:()
+ServerSocket::ServerSocket	Socket.h	/^    ServerSocket();$/;"	p	class:ServerSocket	access:public	signature:()
+ServerSocket::_local_addrinfo	Socket.h	/^    struct addrinfo _local_addrinfo;   $/;"	m	class:ServerSocket	typeref:struct:ServerSocket::addrinfo	access:private
+ServerSocket::_peer_addr	Socket.h	/^    struct sockaddr_storage _peer_addr;$/;"	m	class:ServerSocket	typeref:struct:ServerSocket::sockaddr_storage	access:private
+ServerSocket::_sa	Socket.h	/^    SocketAssistant _sa;$/;"	m	class:ServerSocket	access:private
+ServerSocket::_sockfd	Socket.h	/^    int _sockfd;$/;"	m	class:ServerSocket	access:private
+ServerSocket::getLocalIP	Socket.cpp	/^std::string ServerSocket::getLocalIP() {$/;"	f	class:ServerSocket	signature:()
+ServerSocket::getLocalIP	Socket.h	/^    std::string getLocalIP();$/;"	p	class:ServerSocket	access:public	signature:()
+ServerSocket::getLocalPort	Socket.cpp	/^int ServerSocket::getLocalPort() {$/;"	f	class:ServerSocket	signature:()
+ServerSocket::getLocalPort	Socket.h	/^    int getLocalPort();$/;"	p	class:ServerSocket	access:public	signature:()
+ServerSocket::getRemoteIP	Socket.cpp	/^std::string ServerSocket::getRemoteIP() {$/;"	f	class:ServerSocket	signature:()
+ServerSocket::getRemoteIP	Socket.h	/^    std::string getRemoteIP();$/;"	p	class:ServerSocket	access:public	signature:()
+Socket	Socket.cpp	/^Socket::Socket() {$/;"	f	class:Socket	signature:()
+Socket	Socket.cpp	/^Socket::Socket(const Socket& sock) {$/;"	f	class:Socket	signature:(const Socket& sock)
+Socket	Socket.cpp	/^Socket::Socket(int sockfd) {$/;"	f	class:Socket	signature:(int sockfd)
+Socket	Socket.h	/^    Socket();$/;"	p	class:Socket	access:public	signature:()
+Socket	Socket.h	/^    Socket(const Socket& ); $/;"	p	class:Socket	access:public	signature:(const Socket& )
+Socket	Socket.h	/^    Socket(int sockfd);     \/\/promotion constructor$/;"	p	class:Socket	access:public	signature:(int sockfd)
+Socket	Socket.h	/^class Socket$/;"	c
+Socket	Sockets.cpp	/^Socket::Socket() : SocketConnectionCount(0) {$/;"	f	class:Socket	signature:()
+Socket	Sockets.cpp	/^Socket::Socket(int s) : sockfd_(s), SocketConnectionCount(0) {$/;"	f	class:Socket	signature:(int s)
+Socket	Sockets.h	/^    Socket();$/;"	p	class:Socket	access:public	signature:()
+Socket	Sockets.h	/^    Socket(int s);$/;"	p	class:Socket	access:public	signature:(int s)
+Socket	Sockets.h	/^class Socket$/;"	c
+Socket::Close	Socket.cpp	/^void Socket::Close() {$/;"	f	class:Socket	signature:()
+Socket::Close	Socket.h	/^    void Close(); $/;"	p	class:Socket	access:public	signature:()
+Socket::Connect	Socket.cpp	/^void Socket::Connect(const char* connectAddr, int port) {$/;"	f	class:Socket	signature:(const char* connectAddr, int port)
+Socket::Connect	Socket.h	/^    void Connect(const char* connectAddr, int port);$/;"	p	class:Socket	access:public	signature:(const char* connectAddr, int port)
+Socket::Receive	Socket.cpp	/^int Socket::Receive(char* recevStream, int len, int flags, int recevSize) {$/;"	f	class:Socket	signature:(char* recevStream, int len, int flags, int recevSize)
+Socket::Receive	Socket.h	/^    int Receive(char* recevStream, int len, int flags=0, int recevSize=3074); \/\/recev up to *len$/;"	p	class:Socket	access:public	signature:(char* recevStream, int len, int flags=0, int recevSize=3074)
+Socket::Send	Socket.cpp	/^int Socket::Send(const char* msg, int len, int flags, int sendSize) {$/;"	f	class:Socket	signature:(const char* msg, int len, int flags, int sendSize)
+Socket::Send	Socket.h	/^    int Send(const char *msg, int len, int flags=0, int sendSize=3074); \/\/send up to *len$/;"	p	class:Socket	access:public	signature:(const char *msg, int len, int flags=0, int sendSize=3074)
+Socket::Socket	Socket.cpp	/^Socket::Socket() {$/;"	f	class:Socket	signature:()
+Socket::Socket	Socket.cpp	/^Socket::Socket(const Socket& sock) {$/;"	f	class:Socket	signature:(const Socket& sock)
+Socket::Socket	Socket.cpp	/^Socket::Socket(int sockfd) {$/;"	f	class:Socket	signature:(int sockfd)
+Socket::Socket	Socket.h	/^    Socket();$/;"	p	class:Socket	access:public	signature:()
+Socket::Socket	Socket.h	/^    Socket(const Socket& ); $/;"	p	class:Socket	access:public	signature:(const Socket& )
+Socket::Socket	Socket.h	/^    Socket(int sockfd);     \/\/promotion constructor$/;"	p	class:Socket	access:public	signature:(int sockfd)
+Socket::Socket	Sockets.cpp	/^Socket::Socket() : SocketConnectionCount(0) {$/;"	f	class:Socket	signature:()
+Socket::Socket	Sockets.cpp	/^Socket::Socket(int s) : sockfd_(s), SocketConnectionCount(0) {$/;"	f	class:Socket	signature:(int s)
+Socket::Socket	Sockets.h	/^    Socket();$/;"	p	class:Socket	access:public	signature:()
+Socket::Socket	Sockets.h	/^    Socket(int s);$/;"	p	class:Socket	access:public	signature:(int s)
+Socket::SocketConnectionCount	Sockets.h	/^    volatile long SocketConnectionCount;$/;"	m	class:Socket	access:private
+Socket::_peer_addr	Socket.h	/^    struct sockaddr_storage _peer_addr;$/;"	m	class:Socket	typeref:struct:Socket::sockaddr_storage	access:private
+Socket::_sa	Socket.h	/^    SocketAssistant _sa;$/;"	m	class:Socket	access:private
+Socket::_sockfd	Socket.h	/^    int _sockfd;$/;"	m	class:Socket	access:private
+Socket::connect	Sockets.cpp	/^bool Socket::connect(std::string url, int port, bool throwError) {$/;"	f	class:Socket	signature:(std::string url, int port, bool throwError)
+Socket::connect	Sockets.h	/^    bool connect(std::string url, int port, bool throwError = false);$/;"	p	class:Socket	access:public	signature:(std::string url, int port, bool throwError = false)
+Socket::disconnect	Sockets.cpp	/^void Socket::disconnect() {$/;"	f	class:Socket	signature:()
+Socket::disconnect	Sockets.h	/^    void disconnect();$/;"	p	class:Socket	access:public	signature:()
+Socket::getHostName	Sockets.h	/^    std::string getHostName();$/;"	p	class:Socket	access:public	signature:()
+Socket::getLocalIP	Sockets.cpp	/^std::string Socket::getLocalIP() {$/;"	f	class:Socket	signature:()
+Socket::getLocalIP	Sockets.h	/^    std::string getLocalIP();$/;"	p	class:Socket	access:public	signature:()
+Socket::getLocalPort	Sockets.cpp	/^int Socket::getLocalPort() {$/;"	f	class:Socket	signature:()
+Socket::getLocalPort	Sockets.h	/^    int getLocalPort();$/;"	p	class:Socket	access:public	signature:()
+Socket::getRemoteIP	Socket.cpp	/^std::string Socket::getRemoteIP() {$/;"	f	class:Socket	signature:()
+Socket::getRemoteIP	Socket.h	/^    std::string getRemoteIP();$/;"	p	class:Socket	access:public	signature:()
+Socket::getRemoteIP	Sockets.cpp	/^std::string Socket::getRemoteIP() {$/;"	f	class:Socket	signature:()
+Socket::getRemoteIP	Sockets.h	/^    std::string getRemoteIP();$/;"	p	class:Socket	access:public	signature:()
+Socket::getRemotePort	Socket.cpp	/^int Socket::getRemotePort() {$/;"	f	class:Socket	signature:()
+Socket::getRemotePort	Socket.h	/^    int getRemotePort();$/;"	p	class:Socket	access:public	signature:()
+Socket::getRemotePort	Sockets.cpp	/^int Socket::getRemotePort() {$/;"	f	class:Socket	signature:()
+Socket::getRemotePort	Sockets.h	/^    int getRemotePort();$/;"	p	class:Socket	access:public	signature:()
+Socket::getSocketConnectionCount	Sockets.h	/^    long getSocketConnectionCount();$/;"	p	class:Socket	access:public	signature:()
+Socket::getSocketConnectionCount	Sockets.h	/^inline long Socket::getSocketConnectionCount()$/;"	f	class:Socket	signature:()
+Socket::operator =	Socket.cpp	/^Socket& Socket::operator =(const Socket& rhs) {$/;"	f	class:Socket	signature:(const Socket& rhs)
+Socket::operator =	Socket.h	/^    Socket& operator=(const Socket &rhs);   \/\/assignment $/;"	p	class:Socket	access:public	signature:(const Socket &rhs)
+Socket::operator =	Sockets.cpp	/^Socket &Socket::operator =(int sock) {$/;"	f	class:Socket	signature:(int sock)
+Socket::operator =	Sockets.h	/^    Socket &operator=(int sock);$/;"	p	class:Socket	access:public	signature:(int sock)
+Socket::operator int	Socket.cpp	/^Socket::operator int() {$/;"	f	class:Socket	signature:()
+Socket::operator int	Socket.h	/^    operator int();$/;"	p	class:Socket	access:public	signature:()
+Socket::operator int	Sockets.cpp	/^Socket::operator int() {$/;"	f	class:Socket	signature:()
+Socket::operator int	Sockets.h	/^    operator int();$/;"	p	class:Socket	access:public	signature:()
+Socket::recv	Sockets.cpp	/^bool Socket::recv(char* block, bool throwError) {$/;"	f	class:Socket	signature:(char* block, bool throwError)
+Socket::recv	Sockets.h	/^    bool recv(char* block, bool throwError=false);$/;"	p	class:Socket	access:public	signature:(char* block, bool throwError=false)
+Socket::send	Sockets.cpp	/^bool Socket::send(const char* block, size_t len, bool throwError) {$/;"	f	class:Socket	signature:(const char* block, size_t len, bool throwError)
+Socket::send	Sockets.h	/^    bool send(const char* block, size_t len, bool throwError=false);$/;"	p	class:Socket	access:public	signature:(const char* block, size_t len, bool throwError=false)
+Socket::sockfd_	Sockets.h	/^    int sockfd_;$/;"	m	class:Socket	access:private
+Socket::ss_	Sockets.h	/^    SocketSystem ss_;$/;"	m	class:Socket	access:private
+Socket::~Socket	Socket.cpp	/^Socket::~Socket() {$/;"	f	class:Socket	signature:()
+Socket::~Socket	Socket.h	/^    ~Socket();$/;"	p	class:Socket	access:public	signature:()
+SocketAssistant	Socket.h	/^class SocketAssistant$/;"	c
+SocketAssistant::Init	Socket.cpp	/^void SocketAssistant::Init(const char* nodename, const char* sevname) {$/;"	f	class:SocketAssistant	signature:(const char* nodename, const char* sevname)
+SocketAssistant::Init	Socket.h	/^    void Init(const char* nodename,const char* sevname=NULL);$/;"	p	class:SocketAssistant	access:private	signature:(const char* nodename,const char* sevname=NULL)
+SocketAssistant::addrList	Socket.h	/^    struct addrinfo hints, *addrList;$/;"	m	class:SocketAssistant	typeref:struct:SocketAssistant::	access:private
+SocketAssistant::getAddr	Socket.cpp	/^std::string SocketAssistant::getAddr(sockaddr* sa) {$/;"	f	class:SocketAssistant	signature:(sockaddr* sa)
+SocketAssistant::getAddr	Socket.h	/^    std::string getAddr(struct sockaddr* sa);$/;"	p	class:SocketAssistant	access:private	signature:(struct sockaddr* sa)
+SocketAssistant::getAddrByName	Socket.cpp	/^std::string SocketAssistant::getAddrByName(const std::string& hostname) {$/;"	f	class:SocketAssistant	signature:(const std::string& hostname)
+SocketAssistant::getAddrByName	Socket.h	/^    std::string getAddrByName(const std::string& hostname);$/;"	p	class:SocketAssistant	access:public	signature:(const std::string& hostname)
+SocketAssistant::getInetAddr	Socket.cpp	/^void *SocketAssistant::getInetAddr(struct sockaddr* sa) {$/;"	f	class:SocketAssistant	signature:(struct sockaddr* sa)
+SocketAssistant::getInetAddr	Socket.h	/^    void* getInetAddr(struct sockaddr* sa);$/;"	p	class:SocketAssistant	access:private	signature:(struct sockaddr* sa)
+SocketAssistant::getName	Socket.cpp	/^std::string SocketAssistant::getName(sockaddr* sa) {$/;"	f	class:SocketAssistant	signature:(sockaddr* sa)
+SocketAssistant::getName	Socket.h	/^    std::string getName(struct sockaddr* sa);$/;"	p	class:SocketAssistant	access:private	signature:(struct sockaddr* sa)
+SocketAssistant::getNameByAddr	Socket.cpp	/^std::string SocketAssistant::getNameByAddr(const std::string& addr) {$/;"	f	class:SocketAssistant	signature:(const std::string& addr)
+SocketAssistant::getNameByAddr	Socket.h	/^    std::string getNameByAddr(const std::string& addr);$/;"	p	class:SocketAssistant	access:public	signature:(const std::string& addr)
+SocketAssistant::getPort	Socket.cpp	/^int SocketAssistant::getPort(struct sockaddr* sa) {$/;"	f	class:SocketAssistant	signature:(struct sockaddr* sa)
+SocketAssistant::getPort	Socket.h	/^    int getPort(struct sockaddr* sa);$/;"	p	class:SocketAssistant	access:private	signature:(struct sockaddr* sa)
+SocketAssistant::hints	Socket.h	/^    struct addrinfo hints, *addrList;$/;"	m	class:SocketAssistant	typeref:struct:SocketAssistant::addrinfo	access:private
+SocketConnectionCount	Sockets.h	/^    volatile long SocketConnectionCount;$/;"	m	class:Socket	access:private
+SocketListener	Sockets.cpp	/^SocketListener::SocketListener(int port) : InvalidSocketCount(0) {$/;"	f	class:SocketListener	signature:(int port)
+SocketListener	Sockets.h	/^    SocketListener(int port);$/;"	p	class:SocketListener	access:public	signature:(int port)
+SocketListener	Sockets.h	/^class SocketListener$/;"	c
+SocketListener::InvalidSocketCount	Sockets.h	/^    volatile long InvalidSocketCount;$/;"	m	class:SocketListener	access:private
+SocketListener::SocketListener	Sockets.cpp	/^SocketListener::SocketListener(int port) : InvalidSocketCount(0) {$/;"	f	class:SocketListener	signature:(int port)
+SocketListener::SocketListener	Sockets.h	/^    SocketListener(int port);$/;"	p	class:SocketListener	access:public	signature:(int port)
+SocketListener::getInvalidSocketCount	Sockets.h	/^    long getInvalidSocketCount();$/;"	p	class:SocketListener	access:public	signature:()
+SocketListener::getInvalidSocketCount	Sockets.h	/^inline long SocketListener::getInvalidSocketCount()$/;"	f	class:SocketListener	signature:()
+SocketListener::getLocalIP	Sockets.cpp	/^std::string SocketListener::getLocalIP() {$/;"	f	class:SocketListener	signature:()
+SocketListener::getLocalIP	Sockets.h	/^    std::string getLocalIP();$/;"	p	class:SocketListener	access:public	signature:()
+SocketListener::getLocalPort	Sockets.cpp	/^int SocketListener::getLocalPort() {$/;"	f	class:SocketListener	signature:()
+SocketListener::getLocalPort	Sockets.h	/^    int getLocalPort();$/;"	p	class:SocketListener	access:public	signature:()
+SocketListener::s_	Sockets.h	/^    Socket s_;$/;"	m	class:SocketListener	access:private
+SocketListener::sin	Sockets.h	/^    struct sockaddr_in sin;$/;"	m	class:SocketListener	typeref:struct:SocketListener::sockaddr_in	access:private
+SocketListener::ss_	Sockets.h	/^    SocketSystem ss_;$/;"	m	class:SocketListener	access:private
+SocketListener::stop	Sockets.cpp	/^void SocketListener::stop() {$/;"	f	class:SocketListener	signature:()
+SocketListener::stop	Sockets.h	/^    void stop();$/;"	p	class:SocketListener	access:public	signature:()
+SocketListener::waitForConnect	Sockets.cpp	/^int SocketListener::waitForConnect() {$/;"	f	class:SocketListener	signature:()
+SocketListener::waitForConnect	Sockets.h	/^    int waitForConnect();$/;"	p	class:SocketListener	access:public	signature:()
+SocketListener::~SocketListener	Sockets.cpp	/^SocketListener::~SocketListener() {$/;"	f	class:SocketListener	signature:()
+SocketListener::~SocketListener	Sockets.h	/^    ~SocketListener();$/;"	p	class:SocketListener	access:public	signature:()
+SocketSystem	Sockets.cpp	/^SocketSystem::SocketSystem() {$/;"	f	class:SocketSystem	signature:()
+SocketSystem	Sockets.h	/^    SocketSystem();$/;"	p	class:SocketSystem	access:public	signature:()
+SocketSystem	Sockets.h	/^class SocketSystem$/;"	c
+SocketSystem::GetLastMsg	Sockets.cpp	/^std::string SocketSystem::GetLastMsg(bool WantSocketMsg) {$/;"	f	class:SocketSystem	signature:(bool WantSocketMsg)
+SocketSystem::GetLastMsg	Sockets.h	/^    std::string GetLastMsg(bool WantSocketMsg=true);$/;"	p	class:SocketSystem	access:public	signature:(bool WantSocketMsg=true)
+SocketSystem::SocketSystem	Sockets.cpp	/^SocketSystem::SocketSystem() {$/;"	f	class:SocketSystem	signature:()
+SocketSystem::SocketSystem	Sockets.h	/^    SocketSystem();$/;"	p	class:SocketSystem	access:public	signature:()
+SocketSystem::count	Sockets.cpp	/^int SocketSystem::count = 0;$/;"	m	class:SocketSystem	file:
+SocketSystem::count	Sockets.h	/^    static int count;$/;"	m	class:SocketSystem	access:private
+SocketSystem::getHostName	Sockets.cpp	/^std::string SocketSystem::getHostName() {$/;"	f	class:SocketSystem	signature:()
+SocketSystem::getHostName	Sockets.h	/^    std::string getHostName();$/;"	p	class:SocketSystem	access:public	signature:()
+SocketSystem::getIpFromName	Sockets.cpp	/^std::string SocketSystem::getIpFromName(const char* name) {$/;"	f	class:SocketSystem	signature:(const char* name)
+SocketSystem::getIpFromName	Sockets.h	/^    std::string getIpFromName(const char* name);$/;"	p	class:SocketSystem	access:public	signature:(const char* name)
+SocketSystem::getNameFromIp	Sockets.cpp	/^std::string SocketSystem::getNameFromIp(const std::string& ip) {$/;"	f	class:SocketSystem	signature:(const std::string& ip)
+SocketSystem::getNameFromIp	Sockets.h	/^    std::string getNameFromIp(const std::string &ip);$/;"	p	class:SocketSystem	access:public	signature:(const std::string &ip)
+SocketSystem::loaded	Sockets.cpp	/^bool SocketSystem::loaded = false;$/;"	m	class:SocketSystem	file:
+SocketSystem::loaded	Sockets.h	/^    static bool loaded;$/;"	m	class:SocketSystem	access:private
+SocketSystem::~SocketSystem	Sockets.cpp	/^SocketSystem::~SocketSystem() {$/;"	f	class:SocketSystem	signature:()
+SocketSystem::~SocketSystem	Sockets.h	/^    ~SocketSystem();$/;"	p	class:SocketSystem	access:public	signature:()
+StaticResHandler	RequestHandlers.h	/^  StaticResHandler(const Http_Request& h_request);$/;"	p	class:StaticResHandler	access:public	signature:(const Http_Request& h_request)
+StaticResHandler	RequestHandlers.h	/^class StaticResHandler : public BaseHandler$/;"	c	inherits:BaseHandler
+StaticResHandler::DoProcess	RequestHandlers.h	/^  void DoProcess();$/;"	p	class:StaticResHandler	access:public	signature:()
+StaticResHandler::ResourceRetrieve	RequestHandlers.h	/^  void ResourceRetrieve(const std::string& URI);$/;"	p	class:StaticResHandler	access:private	signature:(const std::string& URI)
+StaticResHandler::ResourceSave	RequestHandlers.h	/^  void ResourceSave(const std::string&URI, char* memBlock, int len);$/;"	p	class:StaticResHandler	access:private	signature:(const std::string&URI, char* memBlock, int len)
+StaticResHandler::StaticResHandler	RequestHandlers.h	/^  StaticResHandler(const Http_Request& h_request);$/;"	p	class:StaticResHandler	access:public	signature:(const Http_Request& h_request)
+StaticResHandler::_continue	RequestHandlers.h	/^  bool _continue;$/;"	m	class:StaticResHandler	access:private
+StaticResHandler::_fileSuffix	RequestHandlers.h	/^  std::string _fileSuffix;$/;"	m	class:StaticResHandler	access:private
+StaticResHandler::getContentType	RequestHandlers.h	/^  void getContentType(const std::string& relativeURL);$/;"	p	class:StaticResHandler	access:private	signature:(const std::string& relativeURL)
+StringToInt	GlobalHelpFunctions.h	/^int StringToInt(const std::string& str) {$/;"	f	signature:(const std::string& str)
+StringToInt	RequestParser.cpp	/^int RequestParser::StringToInt(std::string& str) {$/;"	f	class:RequestParser	signature:(std::string& str)
+StringToInt	RequestParser.h	/^    int StringToInt(std::string& str);$/;"	p	class:RequestParser	access:public	signature:(std::string& str)
+TINYHTTPSERVER_H	TinyHttpServer.h	9;"	d
+ThreadBase	LThread.cpp	/^ThreadBase::ThreadBase()$/;"	f	class:ThreadBase	signature:()
+ThreadBase	LThread.h	/^    ThreadBase();$/;"	p	class:ThreadBase	access:public	signature:()
+ThreadBase	LThread.h	/^class ThreadBase$/;"	c
+ThreadBase::ThreadBase	LThread.cpp	/^ThreadBase::ThreadBase()$/;"	f	class:ThreadBase	signature:()
+ThreadBase::ThreadBase	LThread.h	/^    ThreadBase();$/;"	p	class:ThreadBase	access:public	signature:()
+ThreadBase::join	LThread.cpp	/^void ThreadBase::join()$/;"	f	class:ThreadBase	signature:()
+ThreadBase::join	LThread.h	/^    void join();$/;"	p	class:ThreadBase	access:public	signature:()
+ThreadBase::run	LThread.h	/^    virtual void run()=0;$/;"	p	class:ThreadBase	access:private	signature:()
+ThreadBase::start	LThread.cpp	/^void ThreadBase::start()$/;"	f	class:ThreadBase	signature:()
+ThreadBase::start	LThread.h	/^    void start();$/;"	p	class:ThreadBase	access:public	signature:()
+ThreadBase::threadOps	LThread.cpp	/^void* ThreadBase::threadOps(void* pArg)$/;"	f	class:ThreadBase	signature:(void* pArg)
+ThreadBase::threadOps	LThread.h	/^    static void* threadOps(void* pArg);   $/;"	p	class:ThreadBase	access:private	signature:(void* pArg)
+ThreadBase::thread_ID	LThread.h	/^    pthread_t thread_ID;$/;"	m	class:ThreadBase	access:protected
+ThreadBase::~ThreadBase	LThread.h	/^    virtual ~ThreadBase(){}       \/\/\/\/don't forget!!!!!$/;"	f	class:ThreadBase	access:public	signature:()
+TrimedHeaders	RequestParser.cpp	/^std::string RequestParser::TrimedHeaders() {$/;"	f	class:RequestParser	signature:()
+TrimedHeaders	RequestParser.h	/^    std::string TrimedHeaders();   \/\/cut off redundant prefix if it has  $/;"	p	class:RequestParser	access:public	signature:()
+TypePair	RequestHandler.cpp	/^struct TypePair {$/;"	s	file:
+TypePair::ext	RequestHandler.cpp	/^  std::string ext;$/;"	m	struct:TypePair	file:	access:public
+TypePair::filetype	RequestHandler.cpp	/^  std::string filetype;$/;"	m	struct:TypePair	file:	access:public
+__anon1::_connectionStatus	IRequestHandler.h	/^    std::string _connectionStatus;$/;"	m	struct:__anon1	access:public
+__anon1::_content_Length	IRequestHandler.h	/^    int _content_Length;$/;"	m	struct:__anon1	access:public
+__anon1::_content_Type	IRequestHandler.h	/^    std::string _content_Type;$/;"	m	struct:__anon1	access:public
+__anon1::_encoding	IRequestHandler.h	/^    std::string _encoding;$/;"	m	struct:__anon1	access:public
+__anon1::_host	IRequestHandler.h	/^    std::string _host;       \/\/maybe don't need it$/;"	m	struct:__anon1	access:public
+__anon1::_method	IRequestHandler.h	/^    std::string _method;$/;"	m	struct:__anon1	access:public
+__anon1::_protocal	IRequestHandler.h	/^    std::string _protocal;$/;"	m	struct:__anon1	access:public
+__anon1::_relativeURL	IRequestHandler.h	/^    std::string _relativeURL;$/;"	m	struct:__anon1	access:public
+__anon1::_requestContent	IRequestHandler.h	/^    char* _requestContent;$/;"	m	struct:__anon1	access:public
+__anon1::_request_Type	IRequestHandler.h	/^    Request_Type _request_Type;$/;"	m	struct:__anon1	access:public
+_badRequest	RequestParser.h	/^    bool _badRequest;$/;"	m	class:RequestParser	access:private
+_connectionStatus	IRequestHandler.h	/^    std::string _connectionStatus;$/;"	m	struct:Http_Response	access:public
+_connectionStatus	IRequestHandler.h	/^    std::string _connectionStatus;$/;"	m	struct:__anon1	access:public
+_content	Request.h	/^  const char* _content;$/;"	m	class:Request	access:private
+_content_Length	IRequestHandler.h	/^    int _content_Length;$/;"	m	struct:Http_Response	access:public
+_content_Length	IRequestHandler.h	/^    int _content_Length;$/;"	m	struct:__anon1	access:public
+_content_Type	IRequestHandler.h	/^    std::string _content_Type;$/;"	m	struct:Http_Response	access:public
+_content_Type	IRequestHandler.h	/^    std::string _content_Type;$/;"	m	struct:__anon1	access:public
+_continue	RequestHandlers.h	/^  bool _continue;$/;"	m	class:StaticResHandler	access:private
+_encoding	IRequestHandler.h	/^    std::string _encoding;$/;"	m	struct:__anon1	access:public
+_fileSuffix	RequestHandlers.h	/^  std::string _fileSuffix;$/;"	m	class:StaticResHandler	access:private
+_hasParsed	ClientHandler.h	/^    bool _hasParsed;$/;"	m	class:ClientHandler	access:private
+_hasProcessed	RequestHandlers.h	/^  bool _hasProcessed;$/;"	m	class:BaseHandler	access:protected
+_headers	Request.h	/^  std::string _headers;$/;"	m	class:Request	access:private
+_host	IRequestHandler.h	/^    std::string _host;       \/\/maybe don't need it$/;"	m	struct:__anon1	access:public
+_httpRequest	ClientHandler.h	/^    Http_Request* _httpRequest;$/;"	m	class:ClientHandler	access:private
+_http_Request	RequestHandlers.h	/^  const Http_Request& _http_Request;$/;"	m	class:BaseHandler	access:protected
+_http_Response	RequestHandlers.h	/^  Http_Response* _http_Response;$/;"	m	class:BaseHandler	access:private
+_last_Modified_Time	IRequestHandler.h	/^    std::string _last_Modified_Time;$/;"	m	struct:Http_Response	access:public
+_length	Request.h	/^  int _length;$/;"	m	class:Request	access:private
+_local_addrinfo	Socket.h	/^    struct addrinfo _local_addrinfo;   $/;"	m	class:ServerSocket	typeref:struct:ServerSocket::addrinfo	access:private
+_method	IRequestHandler.h	/^    std::string _method;$/;"	m	struct:__anon1	access:public
+_method	Request.h	/^  std::string _method;$/;"	m	class:Request	access:private
+_peer_addr	Socket.h	/^    struct sockaddr_storage _peer_addr;$/;"	m	class:ServerSocket	typeref:struct:ServerSocket::sockaddr_storage	access:private
+_peer_addr	Socket.h	/^    struct sockaddr_storage _peer_addr;$/;"	m	class:Socket	typeref:struct:Socket::sockaddr_storage	access:private
+_protocal	IRequestHandler.h	/^    std::string _protocal;$/;"	m	struct:Http_Response	access:public
+_protocal	IRequestHandler.h	/^    std::string _protocal;$/;"	m	struct:__anon1	access:public
+_protocal	Request.h	/^  std::string _protocal;$/;"	m	class:Request	access:private
+_relativeURL	IRequestHandler.h	/^    std::string _relativeURL;$/;"	m	struct:__anon1	access:public
+_reponse_Resource	IRequestHandler.h	/^    char* _reponse_Resource;$/;"	m	struct:Http_Response	access:public
+_request	RequestParser.h	/^    std::string _request; $/;"	m	class:RequestParser	access:private
+_requestContent	IRequestHandler.h	/^    char* _requestContent;$/;"	m	struct:__anon1	access:public
+_requestHeaders	ClientHandler.h	/^    std::string _requestHeaders;$/;"	m	class:ClientHandler	access:private
+_requestSock	TinyHttpServer.h	/^    Socket _requestSock;$/;"	m	class:HttpServer	access:private
+_request_Type	IRequestHandler.h	/^    Request_Type _request_Type;$/;"	m	struct:__anon1	access:public
+_sa	Socket.h	/^    SocketAssistant _sa;$/;"	m	class:ServerSocket	access:private
+_sa	Socket.h	/^    SocketAssistant _sa;$/;"	m	class:Socket	access:private
+_sock	ClientHandler.h	/^    Socket _sock;$/;"	m	class:ClientHandler	access:private
+_sockfd	Socket.h	/^    int _sockfd;$/;"	m	class:ServerSocket	access:private
+_sockfd	Socket.h	/^    int _sockfd;$/;"	m	class:Socket	access:private
+_startPos	RequestParser.h	/^    int _startPos;$/;"	m	class:RequestParser	access:private
+_status	IRequestHandler.h	/^    std::string _status;$/;"	m	struct:Http_Response	access:public
+_url	Request.h	/^  std::string _url;$/;"	m	class:Request	access:private
+addContentBody	Request.cpp	/^void Request::addContentBody(const char* contentBody,$/;"	f	class:Request	signature:(const char* contentBody, const int contentLength)
+addContentBody	Request.h	/^  void addContentBody(const char* contentBody,$/;"	p	class:Request	access:public	signature:(const char* contentBody, const int contentLength)
+addrList	Socket.h	/^    struct addrinfo hints, *addrList;$/;"	m	class:SocketAssistant	typeref:struct:SocketAssistant::	access:private
+appendHeader	Request.cpp	/^void Request::appendHeader(const std::string& header)$/;"	f	class:Request	signature:(const std::string& header)
+appendHeader	Request.h	/^  void appendHeader(const std::string& header);$/;"	p	class:Request	access:public	signature:(const std::string& header)
+checkReturnCode	nbproject/Package-Debug.bash	/^function checkReturnCode$/;"	f
+checkReturnCode	nbproject/Package-Release.bash	/^function checkReturnCode$/;"	f
+connect	Sockets.cpp	/^bool Socket::connect(std::string url, int port, bool throwError) {$/;"	f	class:Socket	signature:(std::string url, int port, bool throwError)
+connect	Sockets.h	/^    bool connect(std::string url, int port, bool throwError = false);$/;"	p	class:Socket	access:public	signature:(std::string url, int port, bool throwError = false)
+copyFileToTmpDir	nbproject/Package-Debug.bash	/^function copyFileToTmpDir$/;"	f
+copyFileToTmpDir	nbproject/Package-Release.bash	/^function copyFileToTmpDir$/;"	f
+count	Sockets.cpp	/^int SocketSystem::count = 0;$/;"	m	class:SocketSystem	file:
+count	Sockets.h	/^    static int count;$/;"	m	class:SocketSystem	access:private
+disconnect	Sockets.cpp	/^void Socket::disconnect() {$/;"	f	class:Socket	signature:()
+disconnect	Sockets.h	/^    void disconnect();$/;"	p	class:Socket	access:public	signature:()
+ext	RequestHandler.cpp	/^  std::string ext;$/;"	m	struct:TypePair	file:	access:public
+extensions	RequestHandler.cpp	/^TypePair extensions [] = {$/;"	v
+filetype	RequestHandler.cpp	/^  std::string filetype;$/;"	m	struct:TypePair	file:	access:public
+getAcceptEncoding	RequestParser.cpp	/^std::string RequestParser::getAcceptEncoding() {$/;"	f	class:RequestParser	signature:()
+getAcceptEncoding	RequestParser.h	/^    std::string getAcceptEncoding();$/;"	p	class:RequestParser	access:public	signature:()
+getAddr	Socket.cpp	/^std::string SocketAssistant::getAddr(sockaddr* sa) {$/;"	f	class:SocketAssistant	signature:(sockaddr* sa)
+getAddr	Socket.h	/^    std::string getAddr(struct sockaddr* sa);$/;"	p	class:SocketAssistant	access:private	signature:(struct sockaddr* sa)
+getAddrByName	Socket.cpp	/^std::string SocketAssistant::getAddrByName(const std::string& hostname) {$/;"	f	class:SocketAssistant	signature:(const std::string& hostname)
+getAddrByName	Socket.h	/^    std::string getAddrByName(const std::string& hostname);$/;"	p	class:SocketAssistant	access:public	signature:(const std::string& hostname)
+getConnectionStatus	RequestParser.cpp	/^std::string RequestParser::getConnectionStatus() {$/;"	f	class:RequestParser	signature:()
+getConnectionStatus	RequestParser.h	/^    std::string getConnectionStatus();$/;"	p	class:RequestParser	access:public	signature:()
+getContentBody	Request.cpp	/^const char* Request::getContentBody()$/;"	f	class:Request	signature:()
+getContentBody	Request.h	/^  const char* getContentBody();$/;"	p	class:Request	access:public	signature:()
+getContentLength	RequestParser.cpp	/^int RequestParser::getContentLength() {$/;"	f	class:RequestParser	signature:()
+getContentLength	RequestParser.h	/^    int getContentLength();$/;"	p	class:RequestParser	access:public	signature:()
+getContentType	RequestHandler.cpp	/^void GetHandler::getContentType(const std::string& relativeURL) {$/;"	f	class:GetHandler	signature:(const std::string& relativeURL)
+getContentType	RequestHandlers.h	/^  void getContentType(const std::string& relativeURL);$/;"	p	class:StaticResHandler	access:private	signature:(const std::string& relativeURL)
+getContentType	RequestParser.cpp	/^std::string RequestParser::getContentType() {$/;"	f	class:RequestParser	signature:()
+getContentType	RequestParser.h	/^    std::string getContentType();$/;"	p	class:RequestParser	access:public	signature:()
+getCurrentTime	RequestHandler.cpp	/^std::string BaseHandler::getCurrentTime() {$/;"	f	class:BaseHandler	signature:()
+getCurrentTime	RequestHandlers.h	/^  std::string getCurrentTime();$/;"	p	class:BaseHandler	access:public	signature:()
+getHeaderContent	Request.cpp	/^std::string Request::getHeaderContent(const std::string& headerName) const $/;"	f	class:Request	signature:(const std::string& headerName) const
+getHeaderContent	Request.h	/^  std::string getHeaderContent(const std::string& headerName) const;$/;"	p	class:Request	access:public	signature:(const std::string& headerName) const
+getHeaderContent	RequestParser.cpp	/^std::string RequestParser::getHeaderContent(std::string header) {$/;"	f	class:RequestParser	signature:(std::string header)
+getHeaderContent	RequestParser.h	/^    std::string getHeaderContent(std::string header);$/;"	p	class:RequestParser	access:protected	signature:(std::string header)
+getHost	RequestParser.cpp	/^std::string RequestParser::getHost() {$/;"	f	class:RequestParser	signature:()
+getHost	RequestParser.h	/^    std::string getHost();$/;"	p	class:RequestParser	access:public	signature:()
+getHostName	Sockets.cpp	/^std::string SocketSystem::getHostName() {$/;"	f	class:SocketSystem	signature:()
+getHostName	Sockets.h	/^    std::string getHostName();$/;"	p	class:Socket	access:public	signature:()
+getHostName	Sockets.h	/^    std::string getHostName();$/;"	p	class:SocketSystem	access:public	signature:()
+getInetAddr	Socket.cpp	/^void *SocketAssistant::getInetAddr(struct sockaddr* sa) {$/;"	f	class:SocketAssistant	signature:(struct sockaddr* sa)
+getInetAddr	Socket.h	/^    void* getInetAddr(struct sockaddr* sa);$/;"	p	class:SocketAssistant	access:private	signature:(struct sockaddr* sa)
+getInvalidSocketCount	Sockets.h	/^    long getInvalidSocketCount();$/;"	p	class:SocketListener	access:public	signature:()
+getInvalidSocketCount	Sockets.h	/^inline long SocketListener::getInvalidSocketCount()$/;"	f	class:SocketListener	signature:()
+getIpFromName	Sockets.cpp	/^std::string SocketSystem::getIpFromName(const char* name) {$/;"	f	class:SocketSystem	signature:(const char* name)
+getIpFromName	Sockets.h	/^    std::string getIpFromName(const char* name);$/;"	p	class:SocketSystem	access:public	signature:(const char* name)
+getLength	Request.h	/^  int getLength() { return _length;}$/;"	f	class:Request	access:public	signature:()
+getLocalIP	Socket.cpp	/^std::string ServerSocket::getLocalIP() {$/;"	f	class:ServerSocket	signature:()
+getLocalIP	Socket.h	/^    std::string getLocalIP();$/;"	p	class:ServerSocket	access:public	signature:()
+getLocalIP	Sockets.cpp	/^std::string Socket::getLocalIP() {$/;"	f	class:Socket	signature:()
+getLocalIP	Sockets.cpp	/^std::string SocketListener::getLocalIP() {$/;"	f	class:SocketListener	signature:()
+getLocalIP	Sockets.h	/^    std::string getLocalIP();$/;"	p	class:Socket	access:public	signature:()
+getLocalIP	Sockets.h	/^    std::string getLocalIP();$/;"	p	class:SocketListener	access:public	signature:()
+getLocalPort	Socket.cpp	/^int ServerSocket::getLocalPort() {$/;"	f	class:ServerSocket	signature:()
+getLocalPort	Socket.h	/^    int getLocalPort();$/;"	p	class:ServerSocket	access:public	signature:()
+getLocalPort	Sockets.cpp	/^int Socket::getLocalPort() {$/;"	f	class:Socket	signature:()
+getLocalPort	Sockets.cpp	/^int SocketListener::getLocalPort() {$/;"	f	class:SocketListener	signature:()
+getLocalPort	Sockets.h	/^    int getLocalPort();$/;"	p	class:Socket	access:public	signature:()
+getLocalPort	Sockets.h	/^    int getLocalPort();$/;"	p	class:SocketListener	access:public	signature:()
+getName	Socket.cpp	/^std::string SocketAssistant::getName(sockaddr* sa) {$/;"	f	class:SocketAssistant	signature:(sockaddr* sa)
+getName	Socket.h	/^    std::string getName(struct sockaddr* sa);$/;"	p	class:SocketAssistant	access:private	signature:(struct sockaddr* sa)
+getNameByAddr	Socket.cpp	/^std::string SocketAssistant::getNameByAddr(const std::string& addr) {$/;"	f	class:SocketAssistant	signature:(const std::string& addr)
+getNameByAddr	Socket.h	/^    std::string getNameByAddr(const std::string& addr);$/;"	p	class:SocketAssistant	access:public	signature:(const std::string& addr)
+getNameFromIp	Sockets.cpp	/^std::string SocketSystem::getNameFromIp(const std::string& ip) {$/;"	f	class:SocketSystem	signature:(const std::string& ip)
+getNameFromIp	Sockets.h	/^    std::string getNameFromIp(const std::string &ip);$/;"	p	class:SocketSystem	access:public	signature:(const std::string &ip)
+getPort	Socket.cpp	/^int SocketAssistant::getPort(struct sockaddr* sa) {$/;"	f	class:SocketAssistant	signature:(struct sockaddr* sa)
+getPort	Socket.h	/^    int getPort(struct sockaddr* sa);$/;"	p	class:SocketAssistant	access:private	signature:(struct sockaddr* sa)
+getRelativeURL	RequestParser.cpp	/^std::string RequestParser::getRelativeURL() {$/;"	f	class:RequestParser	signature:()
+getRelativeURL	RequestParser.h	/^    std::string getRelativeURL(); $/;"	p	class:RequestParser	access:public	signature:()
+getRemoteIP	Socket.cpp	/^std::string ServerSocket::getRemoteIP() {$/;"	f	class:ServerSocket	signature:()
+getRemoteIP	Socket.cpp	/^std::string Socket::getRemoteIP() {$/;"	f	class:Socket	signature:()
+getRemoteIP	Socket.h	/^    std::string getRemoteIP();$/;"	p	class:ServerSocket	access:public	signature:()
+getRemoteIP	Socket.h	/^    std::string getRemoteIP();$/;"	p	class:Socket	access:public	signature:()
+getRemoteIP	Sockets.cpp	/^std::string Socket::getRemoteIP() {$/;"	f	class:Socket	signature:()
+getRemoteIP	Sockets.h	/^    std::string getRemoteIP();$/;"	p	class:Socket	access:public	signature:()
+getRemotePort	Socket.cpp	/^int Socket::getRemotePort() {$/;"	f	class:Socket	signature:()
+getRemotePort	Socket.h	/^    int getRemotePort();$/;"	p	class:Socket	access:public	signature:()
+getRemotePort	Sockets.cpp	/^int Socket::getRemotePort() {$/;"	f	class:Socket	signature:()
+getRemotePort	Sockets.h	/^    int getRemotePort();$/;"	p	class:Socket	access:public	signature:()
+getRequest	Request.cpp	/^std::string Request::getRequest()$/;"	f	class:Request	signature:()
+getRequest	Request.h	/^  std::string getRequest();$/;"	p	class:Request	access:public	signature:()
+getRequestHeaders	ClientHandler.cpp	/^std::string ClientHandler::getRequestHeaders()$/;"	f	class:ClientHandler	signature:()
+getRequestHeaders	ClientHandler.h	/^    std::string getRequestHeaders();$/;"	p	class:ClientHandler	access:public	signature:()
+getRequestMessagebody	ClientHandler.cpp	/^void ClientHandler::getRequestMessagebody(char** msgBuf)$/;"	f	class:ClientHandler	signature:(char** msgBuf)
+getRequestMessagebody	ClientHandler.h	/^    void getRequestMessagebody(char** msgBuf);$/;"	p	class:ClientHandler	access:private	signature:(char** msgBuf)
+getRequestMethod	RequestParser.cpp	/^std::string RequestParser::getRequestMethod() {$/;"	f	class:RequestParser	signature:()
+getRequestMethod	RequestParser.h	/^    std::string getRequestMethod();$/;"	p	class:RequestParser	access:public	signature:()
+getRequestProtocal	RequestParser.cpp	/^std::string RequestParser::getRequestProtocal() {$/;"	f	class:RequestParser	signature:()
+getRequestProtocal	RequestParser.h	/^    std::string getRequestProtocal();$/;"	p	class:RequestParser	access:public	signature:()
+getResponse	TinyHttpServer.cpp	/^std::string HttpServer::getResponse()$/;"	f	class:HttpServer	signature:()
+getResponse	TinyHttpServer.h	/^    std::string getResponse();$/;"	p	class:HttpServer	access:public	signature:()
+getResponseBody	IRequestHandler.h	/^    virtual void getResponseBody(char** memoryBlock)=0; \/*dyly allocate inside*\/$/;"	p	class:IRequestHandler	access:public	signature:(char** memoryBlock)
+getResponseBody	RequestHandler.cpp	/^void BaseHandler::getResponseBody(char** memoryBlock)$/;"	f	class:BaseHandler	signature:(char** memoryBlock)
+getResponseBody	RequestHandlers.h	/^  virtual void getResponseBody(char** memoryBlock);$/;"	p	class:BaseHandler	access:public	signature:(char** memoryBlock)
+getResponseHeaders	IRequestHandler.h	/^    virtual std::string getResponseHeaders()=0;$/;"	p	class:IRequestHandler	access:public	signature:()
+getResponseHeaders	RequestHandler.cpp	/^std::string BaseHandler::getResponseHeaders() {$/;"	f	class:BaseHandler	signature:()
+getResponseHeaders	RequestHandlers.h	/^  virtual std::string getResponseHeaders();$/;"	p	class:BaseHandler	access:public	signature:()
+getResponseLength	IRequestHandler.h	/^    virtual unsigned int getResponseLength()=0;$/;"	p	class:IRequestHandler	access:public	signature:()
+getResponseLength	RequestHandler.cpp	/^unsigned int BaseHandler::getResponseLength() {$/;"	f	class:BaseHandler	signature:()
+getResponseLength	RequestHandlers.h	/^  unsigned int getResponseLength();$/;"	p	class:BaseHandler	access:public	signature:()
+getSocketConnectionCount	Sockets.h	/^    long getSocketConnectionCount();$/;"	p	class:Socket	access:public	signature:()
+getSocketConnectionCount	Sockets.h	/^inline long Socket::getSocketConnectionCount()$/;"	f	class:Socket	signature:()
+getTest	TinyHttpServer.cpp	/^void getTest(char* t) {$/;"	f	signature:(char* t)
+hints	Socket.h	/^    struct addrinfo hints, *addrList;$/;"	m	class:SocketAssistant	typeref:struct:SocketAssistant::addrinfo	access:private
+join	LThread.cpp	/^void ThreadBase::join()$/;"	f	class:ThreadBase	signature:()
+join	LThread.h	/^    void join();$/;"	p	class:ThreadBase	access:public	signature:()
+loaded	Sockets.cpp	/^bool SocketSystem::loaded = false;$/;"	m	class:SocketSystem	file:
+loaded	Sockets.h	/^    static bool loaded;$/;"	m	class:SocketSystem	access:private
+main	ClientHandler.cpp	/^int main() {$/;"	f	signature:()
+main	LThread.cpp	/^int main(int argc, char** argv) {$/;"	f	signature:(int argc, char** argv)
+main	Request.cpp	/^int main(int argc, const char *argv[])$/;"	f	signature:(int argc, const char *argv[])
+main	RequestParser.cpp	/^int main(int argc, const char *argv[])$/;"	f	signature:(int argc, const char *argv[])
+main	Socket.cpp	/^int main() {$/;"	f	signature:()
+main	TinyHttpServer.cpp	/^int main() {$/;"	f	signature:()
+makeDirectory	nbproject/Package-Debug.bash	/^function makeDirectory$/;"	f
+makeDirectory	nbproject/Package-Release.bash	/^function makeDirectory$/;"	f
+operator =	Socket.cpp	/^Socket& Socket::operator =(const Socket& rhs) {$/;"	f	class:Socket	signature:(const Socket& rhs)
+operator =	Socket.h	/^    Socket& operator=(const Socket &rhs);   \/\/assignment $/;"	p	class:Socket	access:public	signature:(const Socket &rhs)
+operator =	Sockets.cpp	/^Socket &Socket::operator =(int sock) {$/;"	f	class:Socket	signature:(int sock)
+operator =	Sockets.h	/^    Socket &operator=(int sock);$/;"	p	class:Socket	access:public	signature:(int sock)
+operator int	Socket.cpp	/^Socket::operator int() {$/;"	f	class:Socket	signature:()
+operator int	Socket.h	/^    operator int();$/;"	p	class:Socket	access:public	signature:()
+operator int	Sockets.cpp	/^Socket::operator int() {$/;"	f	class:Socket	signature:()
+operator int	Sockets.h	/^    operator int();$/;"	p	class:Socket	access:public	signature:()
+pIRH	ClientHandler.h	/^    IRequestHandler *pIRH;$/;"	m	class:ClientHandler	access:private
+recv	Sockets.cpp	/^bool Socket::recv(char* block, bool throwError) {$/;"	f	class:Socket	signature:(char* block, bool throwError)
+recv	Sockets.h	/^    bool recv(char* block, bool throwError=false);$/;"	p	class:Socket	access:public	signature:(char* block, bool throwError=false)
+run	ClientHandler.cpp	/^void ClientHandler::run() {$/;"	f	class:ClientHandler	signature:()
+run	ClientHandler.h	/^    void run();$/;"	p	class:ClientHandler	access:private	signature:()
+run	LThread.h	/^    virtual void run()=0;$/;"	p	class:ThreadBase	access:private	signature:()
+run	TinyHttpServer.cpp	/^void HttpServer::run() {$/;"	f	class:HttpServer	signature:()
+run	TinyHttpServer.h	/^    void run();$/;"	p	class:HttpServer	access:private	signature:()
+s_	Sockets.h	/^    Socket s_;$/;"	m	class:SocketListener	access:private
+s_	TinyHttpServer.h	/^    ServerSocket s_;  $/;"	m	class:HttpServer	access:private
+send	Sockets.cpp	/^bool Socket::send(const char* block, size_t len, bool throwError) {$/;"	f	class:Socket	signature:(const char* block, size_t len, bool throwError)
+send	Sockets.h	/^    bool send(const char* block, size_t len, bool throwError=false);$/;"	p	class:Socket	access:public	signature:(const char* block, size_t len, bool throwError=false)
+setConnectionStatus	RequestHandler.cpp	/^void BaseHandler::setConnectionStatus(std::string stat) {$/;"	f	class:BaseHandler	signature:(std::string stat)
+setConnectionStatus	RequestHandlers.h	/^  void setConnectionStatus(std::string stat);$/;"	p	class:BaseHandler	access:protected	signature:(std::string stat)
+setContentLength	RequestHandler.cpp	/^void BaseHandler::setContentLength(int len) {$/;"	f	class:BaseHandler	signature:(int len)
+setContentLength	RequestHandlers.h	/^  void setContentLength(int len);$/;"	p	class:BaseHandler	access:protected	signature:(int len)
+setContentType	RequestHandler.cpp	/^void BaseHandler::setContentType(std::string type) {$/;"	f	class:BaseHandler	signature:(std::string type)
+setContentType	RequestHandlers.h	/^  void setContentType(std::string type);$/;"	p	class:BaseHandler	access:protected	signature:(std::string type)
+setMsgBody	RequestHandler.cpp	/^void BaseHandler::setMsgBody(char* res)$/;"	f	class:BaseHandler	signature:(char* res)
+setMsgBody	RequestHandlers.h	/^  void setMsgBody(char* res);$/;"	p	class:BaseHandler	access:protected	signature:(char* res)
+setProtocal	RequestHandler.cpp	/^void BaseHandler::setProtocal(std::string protocal) {$/;"	f	class:BaseHandler	signature:(std::string protocal)
+setProtocal	RequestHandlers.h	/^  void setProtocal(std::string protocal);$/;"	p	class:BaseHandler	access:protected	signature:(std::string protocal)
+setStatus	RequestHandler.cpp	/^void BaseHandler::setStatus(std::string stat) {$/;"	f	class:BaseHandler	signature:(std::string stat)
+setStatus	RequestHandlers.h	/^  void setStatus(std::string stat);$/;"	p	class:BaseHandler	access:protected	signature:(std::string stat)
+sh	nbproject/Makefile-variables.mk	/^ROOT:sh = test -f nbproject\/private\/Makefile-variables.mk || \\$/;"	m
+sin	Sockets.h	/^    struct sockaddr_in sin;$/;"	m	class:SocketListener	typeref:struct:SocketListener::sockaddr_in	access:private
+sizeToString	RequestHandler.cpp	/^std::string BaseHandler::sizeToString(size_t size) {$/;"	f	class:BaseHandler	signature:(size_t size)
+sizeToString	RequestHandlers.h	/^  std::string sizeToString(size_t size);$/;"	p	class:BaseHandler	access:public	signature:(size_t size)
+sock	index.htm	/^      function sock(){$/;"	f
+sockfd_	Sockets.h	/^    int sockfd_;$/;"	m	class:Socket	access:private
+ss_	Sockets.h	/^    SocketSystem ss_;$/;"	m	class:Socket	access:private
+ss_	Sockets.h	/^    SocketSystem ss_;$/;"	m	class:SocketListener	access:private
+start	LThread.cpp	/^void ThreadBase::start()$/;"	f	class:ThreadBase	signature:()
+start	LThread.h	/^    void start();$/;"	p	class:ThreadBase	access:public	signature:()
+stop	Sockets.cpp	/^void SocketListener::stop() {$/;"	f	class:SocketListener	signature:()
+stop	Sockets.h	/^    void stop();$/;"	p	class:SocketListener	access:public	signature:()
+threadOps	LThread.cpp	/^void* ThreadBase::threadOps(void* pArg)$/;"	f	class:ThreadBase	signature:(void* pArg)
+threadOps	LThread.h	/^    static void* threadOps(void* pArg);   $/;"	p	class:ThreadBase	access:private	signature:(void* pArg)
+thread_ID	LThread.h	/^    pthread_t thread_ID;$/;"	m	class:ThreadBase	access:protected
+uploadFile	index.htm	/^function uploadFile(){$/;"	f
+waitForConnect	Sockets.cpp	/^int SocketListener::waitForConnect() {$/;"	f	class:SocketListener	signature:()
+waitForConnect	Sockets.h	/^    int waitForConnect();$/;"	p	class:SocketListener	access:public	signature:()
+~BaseHandler	RequestHandler.cpp	/^BaseHandler::~BaseHandler()$/;"	f	class:BaseHandler	signature:()
+~BaseHandler	RequestHandlers.h	/^  virtual ~BaseHandler();$/;"	p	class:BaseHandler	access:public	signature:()
+~ClientHandler	ClientHandler.cpp	/^ClientHandler::~ClientHandler() {$/;"	f	class:ClientHandler	signature:()
+~ClientHandler	ClientHandler.h	/^    virtual ~ClientHandler();$/;"	p	class:ClientHandler	access:public	signature:()
+~HttpServer	TinyHttpServer.cpp	/^HttpServer::~HttpServer() {$/;"	f	class:HttpServer	signature:()
+~HttpServer	TinyHttpServer.h	/^    ~HttpServer();$/;"	p	class:HttpServer	access:public	signature:()
+~IRequestHandler	IRequestHandler.h	/^    virtual ~IRequestHandler(){}$/;"	f	class:IRequestHandler	access:public	signature:()
+~PostHandler	RequestHandlers.h	/^  virtual ~PostHandler ();$/;"	p	class:PostHandler	access:public	signature:()
+~Request	Request.cpp	/^Request::~Request()$/;"	f	class:Request	signature:()
+~Request	Request.h	/^  virtual ~Request ();$/;"	p	class:Request	access:public	signature:()
+~RequestParser	RequestParser.h	/^    ~RequestParser() {$/;"	f	class:RequestParser	access:public	signature:()
+~Socket	Socket.cpp	/^Socket::~Socket() {$/;"	f	class:Socket	signature:()
+~Socket	Socket.h	/^    ~Socket();$/;"	p	class:Socket	access:public	signature:()
+~SocketListener	Sockets.cpp	/^SocketListener::~SocketListener() {$/;"	f	class:SocketListener	signature:()
+~SocketListener	Sockets.h	/^    ~SocketListener();$/;"	p	class:SocketListener	access:public	signature:()
+~SocketSystem	Sockets.cpp	/^SocketSystem::~SocketSystem() {$/;"	f	class:SocketSystem	signature:()
+~SocketSystem	Sockets.h	/^    ~SocketSystem();$/;"	p	class:SocketSystem	access:public	signature:()
+~ThreadBase	LThread.h	/^    virtual ~ThreadBase(){}       \/\/\/\/don't forget!!!!!$/;"	f	class:ThreadBase	access:public	signature:()

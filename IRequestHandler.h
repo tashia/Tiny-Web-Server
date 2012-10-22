@@ -36,17 +36,17 @@ typedef struct
     std::string _content_Type;
     int _content_Length;
 }Http_Request;
-
-typedef struct
+struct Http_Response
 {
     std::string _protocal;
     std::string _status;
     int _content_Length;
     std::string _content_Type;
     std::string _last_Modified_Time;
-    char* _reponse_Resource;
+    const char* _reponse_Resource;
     std::string _connectionStatus;
-}Http_Response;
+    Http_Response(): _reponse_Resource(0){}
+};
 
 
 class IRequestHandler
@@ -54,7 +54,7 @@ class IRequestHandler
 public:
     virtual ~IRequestHandler(){}
     virtual std::string getResponseHeaders()=0;
-    virtual void getResponseBody(char** memoryBlock)=0; /*dyly allocate inside*/
+    virtual void getResponseBody(const char** memoryBlock)=0; /*dyly allocate inside*/
     virtual unsigned int getResponseLength()=0;
 };
 

@@ -64,10 +64,9 @@ void ClientHandler::ParseHeaders()
     _httpRequest->_host = rp.getHost();
     _httpRequest->_connectionStatus = rp.getConnectionStatus();
     // here to check the connection Status
-    if (_httpRequest->_connectionStatus.compare("keep-alive"))
-        _sock.Close();
+   /* if (_httpRequest->_connectionStatus.compare("keep-alive"))
+        _sock.Close();*/
     
-    //----------------------------------------------------------
     _httpRequest->_content_Length = rp.getContentLength();
     _httpRequest->_encoding = rp.getAcceptEncoding();
     _httpRequest->_content_Type = rp.getContentType();
@@ -82,15 +81,17 @@ void ClientHandler::run() {
     ParseHeaders();
     pIRH = RequestHandlerFactory::CreateRequestHandler(*_httpRequest);
     std::string headers = pIRH->getResponseHeaders();
+    
     _sock.Send(headers.c_str(),headers.size());
     int msgBodyLen = pIRH->getResponseLength();
     if(msgBodyLen > 0)
     {
-        char* msgBody;
+        const char* msgBody;
         pIRH->getResponseBody(&msgBody);
         _sock.Send(msgBody,msgBodyLen);
     }
     _sock.Close(); //close or not
+    
 }
 
 

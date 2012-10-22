@@ -24,14 +24,13 @@
 #include <map>
 #include <vector>
 
-
 class BaseHandler : public IRequestHandler {
 public:
     BaseHandler(const Http_Request& h_request);
     virtual ~BaseHandler();
-    virtual void DoProcess()=0;
+    virtual void DoProcess() = 0;
     virtual std::string getResponseHeaders();
-    virtual void getResponseBody(char** memoryBlock);
+    virtual void getResponseBody(const char** memoryBlock);
     unsigned int getResponseLength();
     std::string sizeToString(size_t size);
     std::string getCurrentTime();
@@ -41,26 +40,35 @@ protected:
     void setContentLength(int len);
     void setContentType(std::string type);
     void setConnectionStatus(std::string stat);
-    void setMsgBody(char* res);
+    void setMsgBody(const char* res);
     bool _hasProcessed;
     const Http_Request& _http_Request;
 private:
     Http_Response* _http_Response;
-    
+
 };
 
-
-class StaticResHandler : public BaseHandler
-{
+class GetHandler : public BaseHandler {
 public:
-    StaticResHandler(const Http_Request& h_request);
+    GetHandler(const Http_Request& h_request);
     void DoProcess();
 private:
     void getContentType(const std::string& relativeURL);
     void ResourceRetrieve(const std::string& URI);
-    void ResourceSave(const std::string&URI, char* memBlock, int len);
     bool _continue;
     std::string _fileSuffix;
+};
+
+class PostHandler : public BaseHandler {
+public:
+    PostHandler(const Http_Request& h_request);
+    void DoProcess();
+
+    virtual ~PostHandler() {
+    } // if lack of this build error
+private:
+    void ResourceSave(const std::string&URI, char* memBlock, int len);
+
 };
 
 #endif	/* REQUESTHANDLERS_H */

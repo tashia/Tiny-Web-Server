@@ -13,7 +13,7 @@ RequestParser::RequestParser(std::string& request) : _request(request),
 {
 }
 
-//--------------< get Http method>----------------------------------------------
+//--------------< get Http method>--------------------------------
 
 std::string RequestParser::getRequestMethod() {
   int i=0;
@@ -35,7 +35,7 @@ std::string RequestParser::getRequestMethod() {
   return _request.substr(_startPos, end - _startPos);
 }
 
-//--------------< get relative URL>---------------------------------------------
+//--------------< get relative URL>------------------------------
 
 std::string RequestParser::getRelativeURL() {
   if(_badRequest) return "";
@@ -52,15 +52,15 @@ std::string RequestParser::getRelativeURL() {
     return _request.substr(begin, end - begin);
 }
 
-//--------------< get request protocal>-----------------------------------------
+//--------------< get request protocal>----------------------------
 
 std::string RequestParser::getRequestProtocal() {
   size_t begin, end;
-  begin = _request.find("HTTP", _startPos);
+  begin = _request.find("HTTP/", _startPos);
   if (begin == std::string::npos)
     return "";
   if ((end = _request.find("\n", begin)) != std::string::npos) {
-    std::string p = _request.substr(begin, end - begin);
+    std::string p( _request.substr(begin, end - begin));
     if ((end = p.find('\r')) != std::string::npos) { /*delete carriage return*/
       p.erase(end, 1);
     }
@@ -69,7 +69,7 @@ std::string RequestParser::getRequestProtocal() {
     return "";
 }
 
-//--------------< get content length >------------------------------------------
+//--------------< get content length >-------------------------
 
 int RequestParser::getContentLength() {
   std::string len = getHeaderContent("Content-Length: ");
@@ -108,7 +108,7 @@ std::string RequestParser::TrimedHeaders() {
   return _request.substr(_startPos);
 }
 
-//--------------< string to int >----------------------------------------------
+//--------------< string to int >---------------------------------
 
 int RequestParser::StringToInt(std::string& str) {
   int val;
@@ -159,9 +159,9 @@ int main(int argc, const char *argv[])
   std::cout<<"\n"<<rp->getRequestMethod();
   std::cout<<"\n"<<rp->getRelativeURL();
   std::cout<<"\n"<<rp->getRequestProtocal();
-  std::cout<<"\n"<<rp->getHost();
-  std::cout<<"\n"<<rp->getContentType();
   std::cout<<"\n"<<rp->getContentLength();
+  std::cout<<"\n"<<rp->getContentType();
+  std::cout<<"\n"<<rp->getHost();
   return 0;
 }
 

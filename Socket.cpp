@@ -155,7 +155,6 @@ void Socket::Connect(const char* connectAddr, int port) {
             perror("client: connect");
             continue;
         }
-        _peer_addr = *(p->ai_addr); /*get info who your connecting to*/
         break;
     }
     if (p == NULL) {
@@ -215,12 +214,14 @@ void Socket::Close() {
 //--------------< get remote ip >-----------------------
 
 std::string Socket::getRemoteIP() {
+    
     return _sa.getAddr((struct sockaddr*) &_peer_addr);
 }
 
 //--------------< get remote port >----------------------
 
 int Socket::getRemotePort() {
+   
     return _sa.getPort((struct sockaddr*) &_peer_addr);
 }
 /* Socket Assistant */

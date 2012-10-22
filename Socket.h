@@ -74,7 +74,7 @@ public:
 private:
     int _sockfd;
     SocketAssistant _sa;
-    struct sockaddr _peer_addr;
+    struct sockaddr_storage _peer_addr;
 };
 
 
