@@ -202,7 +202,6 @@ PostHandler::PostHandler(const Http_Request& h_request) : BaseHandler(h_request)
 {
 }
 
-static int count=0;
 //----------------< Do Post Process >--------------------------------
 //
 void PostHandler::DoProcess()
@@ -211,9 +210,10 @@ void PostHandler::DoProcess()
   //check the action
   if (this->_http_Request._relativeURL.find("message/") != std::string::npos) {
     //this is message action
-    std::cout<<"the message is:\n"<<this->_http_Request._requestContent<<std::endl;
-    std::cout<<count<<std::endl;
-    count++;
+    std::cout<<"the message is:\n";
+    for(int i=0; i<_http_Request._content_Length; i++)
+        std::cout<<this->_http_Request._requestContent[i];
+    std::cout<<"\n";
   } else if (this->_http_Request._relativeURL.find("files/") != std::string::npos) {
     //this is a file action
     ResourceSave(this->_http_Request._relativeURL,
@@ -223,7 +223,7 @@ void PostHandler::DoProcess()
     //handle the unknown action
       
     this->setContentType("text/html");
-    std::string msgBody("<html><p>post failed</p></html>");
+    std::string msgBody("<p>post failed</p>");
     this->setContentLength(msgBody.size());
     char *msg = new char[msgBody.size()];
     for(size_t i=0; i<msgBody.size(); i++)
@@ -233,8 +233,8 @@ void PostHandler::DoProcess()
     _hasProcessed = true;
     return;
   }
-  this->setContentType("text/html");
-  std::string msgBody("<html><p>post succeeded</p></html>");
+  this->setContentType("text/plain");
+  std::string msgBody("<p>post succeeded</p>");
   this->setContentLength(msgBody.size());
   char *msg = new char[msgBody.size()];
   for(size_t i=0; i<msgBody.size(); i++)

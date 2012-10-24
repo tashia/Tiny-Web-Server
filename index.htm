@@ -21,17 +21,26 @@
         };
         alert("the end ...");
       } 
- /*source: www.matlus.com/html5-file-upload-with-progress*/
+/*source: www.matlus.com/html5-file-upload-with-progress*/
 function uploadFile(){
-
   var xhr = new XMLHttpRequest();
-alert("post starts");
   var fd = new FormData(document.getElementById("upForm"));
 
   xhr.open("POST", "files/",true);
 
   xhr.send(fd);
   alert("post finishes");
+}
+function UPLoadMsg(){
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange=function()
+  {
+    if (xhr.readyState==4 && xhr.status==200) {
+      document.getElementById("display_area").innerHTML = xhr.responseText;
+    }
+  }
+  xhr.open("POST", "message/",true);
+  xhr.send(document.getElementById("msg_area").value);
 }
 </script>
   </head>
@@ -47,11 +56,11 @@ alert("post starts");
         <p>This is the main content</p>
         <div id="text_area">
           <!-- text field-->
-          <form action="message/" method="post" accept-charset="utf-8">
+          <form method="post" action="message/" accept-charset="utf-8">
             <p>Text Field:</p> <br>
-            <textarea name="sendMsg" COLS=56 ROWS=10 ></textarea>
+            <textarea name="sendMsg" id="msg_area" COLS=56 ROWS=10 ></textarea>
             <center>
-              <input id="submitBtn" type="Submit" value="Submit"><br>
+              <input id="submitBtn" type="button" value="Submit" onclick="UPLoadMsg()" /><br>
             </center>
           </form>
         </div>

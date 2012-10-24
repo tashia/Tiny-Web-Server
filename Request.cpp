@@ -68,7 +68,7 @@ std::string Request::getHeaderContent(const std::string& headerName) const
 //
 Request::~Request()
 {
- // if (_content != 0) delete [] _content;
+  if (_content != 0) delete [] _content;
 }
 
 
