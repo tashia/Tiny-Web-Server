@@ -1,0 +1,5 @@
+<A HREF="files/\zipfile.zip" target="_blank">zipfile.zip</A><br>
+<A HREF="files/\post.txt" target="_blank">post.txt</A><br>
+<A HREF="files/\post.htm" target="_blank">post.htm</A><br>
+<A HREF="files/\negot.txt" target="_blank">negot.txt</A><br>
+<A HREF="files/\file.txt" target="_blank">file.txt</A><br>

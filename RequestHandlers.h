@@ -24,6 +24,10 @@
 #include <map>
 #include <vector>
 
+/* Global functions for scanning files in server */
+
+std::string ScanFiles(std::string dir);
+
 class BaseHandler : public IRequestHandler {
 public:
     BaseHandler(const Http_Request& h_request);
@@ -70,6 +74,8 @@ private:
     void ResourceSave(const std::string&URI, char* memBlock, int len);
 
 };
+
+
 
 #endif	/* REQUESTHANDLERS_H */
 

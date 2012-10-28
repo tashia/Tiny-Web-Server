@@ -71,6 +71,8 @@ public:
     void Close(); 
     int getRemotePort();
     std::string getRemoteIP();
+    int getLocalPort();
+    std::string getLocalIP();
 private:
     int _sockfd;
     SocketAssistant _sa;
@@ -87,12 +89,10 @@ public:
     void Close();
     int getLocalPort();
     std::string getLocalIP();
-    std::string getRemoteIP();
 private:
     int _sockfd;
     SocketAssistant _sa;
     struct sockaddr_storage _peer_addr;
-    struct addrinfo _local_addrinfo;   
 };
 
 

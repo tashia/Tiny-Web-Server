@@ -21,16 +21,17 @@
         };
         alert("the end ...");
       } 
-/*source: www.matlus.com/html5-file-upload-with-progress*/
-function uploadFile(){
+function getServerFileInfo() {
   var xhr = new XMLHttpRequest();
-  var fd = new FormData(document.getElementById("upForm"));
-
-  xhr.open("POST", "files/",true);
-
-  xhr.send(fd);
-  alert("post finishes");
+  xhr.onreadystatechange=function(){
+    if (xhr.readyState==4 && xhr.status == 200 ) {
+      document.getElementById("display_area").innerHTML = xhr.responseText;
+    }
+  }
+  xhr.open("GET", "info.txt", true);
+  xhr.send();
 }
+
 function UPLoadMsg(){
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange=function()
@@ -73,10 +74,11 @@ function UPLoadMsg(){
           <p>This div for uploading files</p>
           <!--multipart/form-data means no characters are encoded-->
           <form id="upForm" action="files/" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-            <input id="choosefile" type="file" name="files[]" value=""/>
+            <input id="selectfile" type="file" name="files[]" value="" multiple/>
             <input type="button" class="button" value="UPLOAD" name="" onclick="uploadFile()" />
           </form>
         </div>
+
         <!-- this button for websocket demo-->
         <div id="webSock">
           <p>this div for WebSocket test</p>
@@ -86,7 +88,31 @@ function UPLoadMsg(){
           </form>
           <input type="button" class="button" value="WebSocket Connect" name="" onclick="sock()" />
         </div>
+        <!-- This is for get file info area-->
+        <div id="getServerFiles">
+          <p>Click the button to get files information on server</p>
+          <input type="button" name="" value="get server files info" onclick="getServerFileInfo()" />
+        </div>
       </div>
     </div>
+    <script type="text/javascript" charset="utf-8">
+      /*source: www.matlus.com/html5-file-upload-with-progress*/
+    function uploadFile(){
+      var xhr = new XMLHttpRequest();
+      var fs = document.getElementById('selectfile').files;
+      var fd = new FormData(document.getElementById("upForm"));
+      for(var i=0; i<fs.length; i++) {
+        xhr.open("POST", "files/"+fs[0].name,true);
+      }
+      xhr.send(fd);
+    }
+
+/*
+   function FileSelect(evt) {
+   var fs = evt.target.files;
+   }*/
+/*listen the change of input file*/
+//document.getElementById('selectfile').addEventListener('change', FileSelect,false);
+</script>
   </body>
 </html>

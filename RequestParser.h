@@ -34,7 +34,6 @@ public:
     std::string getHost();
     std::string TrimedHeaders();   //cut off redundant prefix if it has  
     int getContentLength();
-    int StringToInt(std::string& str);
 protected:
     std::string getHeaderContent(std::string header);
 private:

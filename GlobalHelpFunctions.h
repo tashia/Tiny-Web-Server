@@ -11,14 +11,16 @@
 #include <string>
 #include <sstream>
 
-std::string IntToString(int size) {
+/*must use inline*/
+
+inline std::string IntToString(int size) {
 
     std::ostringstream out;
   out << size;
   return out.str();
 }
 
-int StringToInt(std::string str) {
+inline int StringToInt(std::string str) {
     int val;
   std::stringstream ss(std::stringstream::in | std::stringstream::out);
   ss << str;

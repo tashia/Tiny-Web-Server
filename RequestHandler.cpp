@@ -1,9 +1,11 @@
 
-#include "RequestHandlers.h"
+
 #include <sstream>
 #include <fstream>
 #include <time.h>
 #include <iostream>
+#include "RequestHandlers.h"
+#include "FileSystem.h"
 
 struct TypePair {
   std::string ext;
@@ -24,6 +26,24 @@ TypePair extensions [] = {
   {"css", "text/css"},
   {"0", "0"}
 };
+
+//--------------< scan server files >------------
+std::string ScanFiles(std::string dir) {
+    std::vector<std::string> files = FileSystem::Directory::getFiles(dir);
+    std::vector<std::string> dirs = FileSystem::Directory::getDirectories(dir);
+    std::string infoString;
+    for(int i=0; i < files.size(); i++)
+    {
+        infoString.append("<A HREF=\""+dir+"\\"+files[i]+"\""+" target=\"_blank\">"
+                +files[i]+"</A><br>\n");
+       // std::cout<<files[i]<<std::endl;
+    }
+    for(int i=0; i<dirs.size(); i++) {
+        //std::cout<<dirs[i]<<std::endl;
+        infoString.append(ScanFiles(dir+"\\"+dirs[i]));
+    }
+    return infoString;
+}
 
 //--------------< constructor >------------------
 
@@ -219,8 +239,14 @@ void PostHandler::DoProcess()
     ResourceSave(this->_http_Request._relativeURL,
                  this->_http_Request._requestContent,
                  this->_http_Request._content_Length);
+    /* write the file info to the info file */
+    
+    std::ofstream infofile("info.txt");
+    infofile<<ScanFiles("files/");
+    infofile.close();
   } else {
     //handle the unknown action
+      
       
     this->setContentType("text/html");
     std::string msgBody("<p>post failed</p>");
@@ -248,8 +274,7 @@ void PostHandler::DoProcess()
 //------------------< save resource >----------------------------
 void PostHandler::ResourceSave(const std::string& URI, char* memBlock, int len)
 {
-    std::string URi(URI+"post.txt");
-  std::ofstream saveFile(URi.substr(1).c_str(), std::ios::out | std::ios::binary);
+  std::ofstream saveFile(URI.substr(1).c_str(), std::ios::out | std::ios::binary);
   saveFile.write(memBlock,len);
 }
 

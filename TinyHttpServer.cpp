@@ -55,14 +55,6 @@ std::string HttpServer::getResponse()
 #include <iostream>
 
 using namespace std;
-void getTest(char* t) {
-    char* m = new char[7];
-    for (int i = 0; i < 6; i++)
-        m[i] = 'a';
-    m[6] = '\0';
-    t = m;
-    std::cout << t << std::endl;
-}
 
 int main() {
     HttpServer hs0(3490);

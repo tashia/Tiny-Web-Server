@@ -1,4 +1,5 @@
 #include "RequestParser.h"
+#include "GlobalHelpFunctions.h"
 #include <sstream>
 #include <ctype.h>
 #include <iostream>
@@ -110,13 +111,6 @@ std::string RequestParser::TrimedHeaders() {
 
 //--------------< string to int >---------------------------------
 
-int RequestParser::StringToInt(std::string& str) {
-  int val;
-  std::stringstream ss(std::stringstream::in | std::stringstream::out);
-  ss << str;
-  ss >> val;
-  return val;
-}
 
 //--------------< get header content >--------------------------
 

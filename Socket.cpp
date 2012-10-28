@@ -41,7 +41,6 @@ void ServerSocket::Bind(int port, const char* addr, int backlog) {
             perror("server: bind");
             continue;
         }
-        _local_addrinfo = *p; // get local address info 
         break;
     }
     if (p == NULL) {
@@ -78,23 +77,29 @@ void ServerSocket::Close() {
 //---------------< get local port >---------------------
 
 int ServerSocket::getLocalPort() {
-    return _sa.getPort(_local_addrinfo.ai_addr);
+    struct sockaddr_storage _local_addr;
+    socklen_t slen = sizeof _local_addr;
+    int getsock_check = getsockname(_sockfd, (struct sockaddr *) &_local_addr, &slen);
+    if (getsock_check == -1) {
+        perror("getsockname:");
+        exit(1);
+    }
+    return _sa.getPort((struct sockaddr *) &_local_addr);
 }
 
 //---------------< get local ip >-----------------------
 
 std::string ServerSocket::getLocalIP() {
-    char host[1024];
-    if (gethostname(host, 1024) == -1)
-        perror("get host name: ");
-    return _sa.getAddrByName(host);
+    struct sockaddr_storage _local_addr;
+    socklen_t slen = sizeof _local_addr;
+    int getsock_check = getsockname(_sockfd, (struct sockaddr *) &_local_addr, &slen);
+    if (getsock_check == -1) {
+        perror("getsockname:");
+        exit(1);
+    }
+    return _sa.getAddr((struct sockaddr *) &_local_addr);
 }
 
-//---------------< get remote ip >-----------------------
-
-std::string ServerSocket::getRemoteIP() {
-    return _sa.getAddr((struct sockaddr*) &_peer_addr);
-}
 
 /* Socket Section*/
 
@@ -155,6 +160,7 @@ void Socket::Connect(const char* connectAddr, int port) {
             perror("client: connect");
             continue;
         }
+        //  _peer_addr = *(p->ai_addr); /*get info who your connecting to*/
         break;
     }
     if (p == NULL) {
@@ -214,15 +220,42 @@ void Socket::Close() {
 //--------------< get remote ip >-----------------------
 
 std::string Socket::getRemoteIP() {
-    
+    // getpeername
+    socklen_t len;
+    len = sizeof _peer_addr;
+    getpeername(_sockfd, (struct sockaddr*) &_peer_addr, &len);
     return _sa.getAddr((struct sockaddr*) &_peer_addr);
 }
 
 //--------------< get remote port >----------------------
 
 int Socket::getRemotePort() {
-   
+    socklen_t len;
+    len = sizeof _peer_addr;
+    getpeername(_sockfd, (struct sockaddr*) &_peer_addr, &len);
     return _sa.getPort((struct sockaddr*) &_peer_addr);
+}
+
+int Socket::getLocalPort() {
+    struct sockaddr_storage _local_addr;
+    socklen_t slen = sizeof _local_addr;
+    int getsock_check = getsockname(_sockfd, (struct sockaddr *) &_local_addr, &slen);
+    if (getsock_check == -1) {
+        perror("getsockname:");
+        exit(1);
+    }
+    return _sa.getPort((struct sockaddr *) &_local_addr);
+}
+
+std::string Socket::getLocalIP() {
+    struct sockaddr_storage _local_addr;
+    socklen_t slen = sizeof _local_addr;
+    int getsock_check = getsockname(_sockfd, (struct sockaddr *) &_local_addr, &slen);
+    if (getsock_check == -1) {
+        perror("getsockname:");
+        exit(1);
+    }
+    return _sa.getAddr((struct sockaddr *) &_local_addr);
 }
 /* Socket Assistant */
 
@@ -249,7 +282,7 @@ int SocketAssistant::getPort(struct sockaddr* sa) {
 //--------------------------------------------------------
 // get the ip address
 
-std::string SocketAssistant::getAddr(sockaddr* sa) {
+std::string SocketAssistant::getAddr(struct sockaddr* sa) {
     char str[INET6_ADDRSTRLEN];
     inet_ntop(sa->sa_family, getInetAddr(sa), str, INET6_ADDRSTRLEN);
     return str;
@@ -258,10 +291,10 @@ std::string SocketAssistant::getAddr(sockaddr* sa) {
 //----------------------------------------------------------
 // get the name info
 
-std::string SocketAssistant::getName(sockaddr* sa) {
+std::string SocketAssistant::getName(struct sockaddr* sa) {
     char host[1024];
     char service[20];
-    getnameinfo(sa, sizeof (*sa), host, 1024, service, 20, 0);
+    getnameinfo(sa, sizeof (*sa), host, 1024, service, 20, NI_NOFQDN);
     return host;
 }
 
@@ -289,7 +322,7 @@ void SocketAssistant::Init(const char* nodename, const char* sevname) {
     memset(&hints, 0, sizeof hints);
     hints.ai_family = AF_UNSPEC;
     hints.ai_socktype = SOCK_STREAM;
- //   hints.ai_flags = AI_PASSIVE; // fill in my IP for me
+    //   hints.ai_flags = AI_PASSIVE; // fill in my IP for me
     if ((status = getaddrinfo(nodename, sevname, &hints, &addrList)) != 0) {
         fprintf(stderr, "getaddrinfo error: %s\n", gai_strerror(status));
         exit(1);
@@ -324,7 +357,7 @@ using namespace std;
 int main() {
     /*test of socket assistant*/
     SocketAssistant sa;
-    string addr = sa.getAddrByName("www.google.com");
+    string addr = sa.getAddrByName("www.syr.edu");
     cout << "address is " << addr << endl;
     string hostname = sa.getNameByAddr(addr);
     cout << "host name is " << hostname << endl;
@@ -334,64 +367,77 @@ int main() {
 
     /*test of socket and server socket*/
 
-
-
     Socket client;
     ServerSocket server;
     server.Bind(3491, "127.0.0.1");
     client.Connect("127.0.0.1", 3491);
     Socket commuSock = server.Accept();
+    /*client communicates with commuSock*/
     string sendMsg = "msg sent";
     string respMsg = "msg recevd";
     string sigClient = "from client";
     string sigServer = "from server";
     char rbuf[100];
-    int sentBytes = client.Send((sendMsg + " " + sigClient).c_str(), 6);
+    int sentBytes = client.Send((sendMsg + " " + sigClient).c_str(), 7);
     cout << "sent bytes is " << sentBytes << endl;
-    int recvBytes = commuSock.Receive(rbuf, 50);
-    cout << "recevd bytes is " << recvBytes << "\n message is "
-            << rbuf << endl;
-
+    int recvBytes; 
     sentBytes = client.Send((sendMsg + " " + sigClient).c_str(), 50, 0, 30);
     cout << "sent bytes is " << sentBytes << endl;
     recvBytes = commuSock.Receive(rbuf, 50, 0, 30);
+    rbuf[recvBytes] = '\0';
     cout << "recevd bytes is " << recvBytes << "\n message is "
             << rbuf << endl;
     cout << "client connecting to " << client.getRemoteIP() << " and the port is "
             << client.getRemotePort() << endl;
-
-    cout << "server connecting to " << server.getRemoteIP() << " and the local port is "
+    cout  << "  the local port is "
             << server.getLocalPort() << " local ip is " << server.getLocalIP() << endl;
 
     client.Close();
     commuSock.Close();
+    
+    
     client.Connect("127.0.0.1", 3491);
     commuSock = server.Accept();
-
     commuSock.Send((respMsg + " " + sigServer).c_str(), 50);
     client.Receive(rbuf, 50);
     cout << "\n message is " << rbuf << endl;
 
     cout << "client connecting to " << client.getRemoteIP() << " and the port is "
             << client.getRemotePort() << endl;
-
-    cout << "server connecting to " << server.getRemoteIP() << " and the local port is "
+    cout << " and the local port is "
             << server.getLocalPort() << " local ip is " << server.getLocalIP() << endl;
     client.Close();
     commuSock.Close();
 
+    client.Connect("128.230.171.184", 80);
+    cout << client.getRemoteIP() << endl;
+    cout << client.getRemotePort() << endl;
+    client.Close();
+    cout<<"open the browse type 127.0.0.1:3491 to call the socket\n";
+    Socket ns = server.Accept();
+    cout << ns.getRemoteIP() << endl;
+    cout << ns.getRemotePort() << endl;
+    cout<<"server ip address is : "<<server.getLocalIP()<<"\n";
+    cout<<"server monitori port is : "<<server.getLocalPort()<<"\n";
+    /*   commuSock = server.Accept();
+         char webSockBuf[1024];
+         int recSize = commuSock.Receive(webSockBuf,1023);
+         webSockBuf[recSize] = '\0';  
+         cout<<"receive size is "<<recSize<<" "<<webSockBuf<<endl;*/
+    /* For the purpose of testing post method of tiny web server*/
     /*
-    char* msgBody;
-    int size = ResourceRetrieve("/3rd_front.jpg",&msgBody);
-    std::cout<<size<<endl;
-    postSock.Connect("localhost",3490);
-    std::string postHeader= "POST /Post/post.jpg HTTP/1.1\r\n"
-                            "Host: localhost:3490\r\n"
-                            "Accept-Encoding: gzip, deflate\r\n"
-                            "Content-Type: image/jpeg\r\n"
-                            "Content-Length: 21292\r\n\r\n";
-    postSock.Send(postHeader.c_str(),postHeader.size());
-    postSock.Send(msgBody,size);
+       Socket postSock;
+       char* msgBody;
+       int size = ResourceRetrieve("/3rd_front.jpg",&msgBody);
+       std::cout<<size<<endl;
+       postSock.Connect("localhost",3490);
+       std::string postHeader= "POST /Post/post.jpg HTTP/1.1\r\n"
+       "Host: localhost:3490\r\n"
+       "Accept-Encoding: gzip, deflate\r\n"
+       "Content-Type: image/jpeg\r\n"
+       "Content-Length: 21292\r\n\r\n";
+       postSock.Send(postHeader.c_str(),postHeader.size());
+       postSock.Send(msgBody,size);
      */
 
     return 0;
