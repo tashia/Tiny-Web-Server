@@ -5,7 +5,7 @@
 #include <stdlib.h>   // exit
 #include <unistd.h>   // close
 #include <arpa/inet.h> // inet_ntop, inet_pton
-#include <iostream>
+
 
 /* ServerSocket Section*/
 //---------------< constructor >----------------------
@@ -333,6 +333,8 @@ void SocketAssistant::Init(const char* nodename, const char* sevname) {
 //--------------< test stub >--------------------------
 
 #ifdef TEST_SSOCKET
+
+#include <iostream>
 #include <fstream>
 
 int ResourceRetrieve(const std::string& URI, char** memblock) {

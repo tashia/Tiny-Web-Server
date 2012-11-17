@@ -1,7 +1,6 @@
 
 #include "ClientHandler.h"
 #include <stdio.h>
-#include <iostream>
 #include "RequestParser.h"
 #include "HandlerFactory.h"
 
@@ -40,7 +39,8 @@ void ClientHandler::ReadHeaders() { //\n\r\n is the terminate mark, read char by
         else
             matchCount = 0;
     }
-    std::cout<<_requestHeaders<<std::endl;
+    //see the request
+ //   std::cout<<_requestHeaders<<std::endl;
 }
 
 //--------------< get request Headers >--------------
@@ -90,7 +90,7 @@ void ClientHandler::run() {
         pIRH->getResponseBody(&msgBody);
         _sock.Send(msgBody,msgBodyLen);
     }
-    _sock.Close(); //close or not
+    _sock.Close(); 
     
 }
 
@@ -115,6 +115,8 @@ void ClientHandler::getRequestMessagebody(char** msgBuf)
 //--------------< test stub >-------------------------------
 
 #ifdef TEST_CLIENTHANDLER
+
+#include<iostream>
 
 int main() {
     ServerSocket server;

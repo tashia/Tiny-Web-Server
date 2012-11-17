@@ -13,6 +13,12 @@
  * it will not disclose any content to the client. 
  * Private scope contains several helper functions to
  * parse the request step by step.
+ * 
+ * Interface
+ * ==============================
+ * ClientHandler ch(Socket)    create an instance
+ * ch.start();                 create a new thread
+ * ch.getRequestHeaders()      get the request string
  *
  *
  *

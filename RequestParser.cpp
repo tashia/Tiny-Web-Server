@@ -2,7 +2,6 @@
 #include "GlobalHelpFunctions.h"
 #include <sstream>
 #include <ctype.h>
-#include <iostream>
 
 std::string Methods[] = {"GET ", "POST ", "PUT ", "DELETE ", "HEAD ", ""};
 

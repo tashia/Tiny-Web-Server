@@ -14,7 +14,17 @@
  * which is able to handler simple get and post
  * request so far. Need to be modified in the
  * future.
- *
+ * 
+ * 
+ * Interface
+ * ======================================
+ * IRequestHandler* iPH = new GetHandler(h_request);
+ * iPH->DoProcess ()         // process the request
+ * iPH->getResponseHeaders()  // get response information
+ * char* block;
+ * iPH->getResponseBody(&block)  //get response body
+ * iPH->getResponseLength();     //get the response body length
+ * iPH->getCurrentTime();        //get GMT time string
  *
  */
 #ifndef REQUESTHANDLERS_H
@@ -67,7 +77,6 @@ class PostHandler : public BaseHandler {
 public:
     PostHandler(const Http_Request& h_request);
     void DoProcess();
-
     virtual ~PostHandler() {
     } // if lack of this build error
 private:

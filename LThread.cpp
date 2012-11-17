@@ -19,7 +19,6 @@ void ThreadBase::start()
     {
         std::cout<<"failed to create thread";
     }
-            return;
     return;
 }
 

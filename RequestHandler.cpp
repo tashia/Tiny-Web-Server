@@ -36,10 +36,8 @@ std::string ScanFiles(std::string dir) {
     {
         infoString.append("<A HREF=\""+dir+"\\"+files[i]+"\""+" target=\"_blank\">"
                 +files[i]+"</A><br>\n");
-       // std::cout<<files[i]<<std::endl;
     }
     for(int i=0; i<dirs.size(); i++) {
-        //std::cout<<dirs[i]<<std::endl;
         infoString.append(ScanFiles(dir+"\\"+dirs[i]));
     }
     return infoString;
@@ -227,15 +225,19 @@ PostHandler::PostHandler(const Http_Request& h_request) : BaseHandler(h_request)
 void PostHandler::DoProcess()
 {
   setProtocal(this->_http_Request._protocal); 
+  std::string action;
   //check the action
   if (this->_http_Request._relativeURL.find("message/") != std::string::npos) {
     //this is message action
+      action = "message";
+    /* Put the code of how to handle the message */
     std::cout<<"the message is:\n";
     for(int i=0; i<_http_Request._content_Length; i++)
         std::cout<<this->_http_Request._requestContent[i];
     std::cout<<"\n";
   } else if (this->_http_Request._relativeURL.find("files/") != std::string::npos) {
     //this is a file action
+      action="file";
     ResourceSave(this->_http_Request._relativeURL,
                  this->_http_Request._requestContent,
                  this->_http_Request._content_Length);
@@ -249,7 +251,7 @@ void PostHandler::DoProcess()
       
       
     this->setContentType("text/html");
-    std::string msgBody("<p>post failed</p>");
+    std::string msgBody("<p>post failure</p>");
     this->setContentLength(msgBody.size());
     char *msg = new char[msgBody.size()];
     for(size_t i=0; i<msgBody.size(); i++)
@@ -259,8 +261,8 @@ void PostHandler::DoProcess()
     _hasProcessed = true;
     return;
   }
-  this->setContentType("text/plain");
-  std::string msgBody("<p>post succeeded</p>");
+  this->setContentType("text/html");
+  std::string msgBody("<p>"+action+" posted successfully</p>");
   this->setContentLength(msgBody.size());
   char *msg = new char[msgBody.size()];
   for(size_t i=0; i<msgBody.size(); i++)

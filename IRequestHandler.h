@@ -36,6 +36,8 @@ typedef struct
     std::string _content_Type;
     int _content_Length;
 }Http_Request;
+
+
 struct Http_Response
 {
     std::string _protocal;

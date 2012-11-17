@@ -11,6 +11,12 @@
  * RequestHandler to fill the http request
  * struct.
  *
+ * 
+ * Interface
+ * =====================================
+ * RequestParser rp(requestString);  create an instance of RequestParser
+ * rp->get...()                 //the get property to get the details of 
+ *                              // corresponding header
  *
  *
  */

@@ -3,6 +3,9 @@
  * Author: shilei
  *
  * Created on October 18, 2012, 9:50 PM
+ * 
+ * This header file creates two global functions for
+ * conversions between int and string.
  */
 
 #ifndef GLOBALHELPFUNCTIONS_H
